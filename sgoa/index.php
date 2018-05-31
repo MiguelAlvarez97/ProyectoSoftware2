@@ -27,6 +27,7 @@
                 <td width="50%"> <a href="aplicacion/formularios_registro/RegistrarProfesor.php"> Registrar Profesor</a></td></br>
                 <label></label>
                 <td width="50%" align="right" valign="middle"><a href="aplicacion/formularios_registro/RegistrarEstudiante.php"> Registrar Estudiante</a></td>
+        <!- hecho por alex ulloa-!>
         </form>
     </body>
 </html>
