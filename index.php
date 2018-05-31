@@ -10,7 +10,7 @@
 </head>
 <body>
 <form action="aplicacion/validar.php" method="post">
-    <h2 style="color: #0000FF; font-size: 250%;">Repositorio Objetos de Aprendizaje</h2>
+    <h2 style="color: #0000FF; font-size: 250%;">Objetos de Aprendizaje</h2>
     <select class= "form-control" name="tipo_usuario" dir="ltr" required>
         <option value="">Tipo de Usuario</option>
         <option value="ADM">Administrador</option>
