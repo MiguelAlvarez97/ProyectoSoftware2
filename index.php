@@ -1,4 +1,3 @@
-//Hola mundo 2
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
@@ -10,7 +9,7 @@
 </head>
 <body>
 <form action="aplicacion/validar.php" method="post">
-    <h2 style="color: #0000FF; font-size: 250%;">Repositorio Objetos de Aprendizaje</h2>
+    <h2 style="color: #0000FF; font-size: 250%;">Objetos de Aprendizaje</h2>
     <select class= "form-control" name="tipo_usuario" dir="ltr" required>
         <option value="">Tipo de Usuario</option>
         <option value="ADM">Administrador</option>
