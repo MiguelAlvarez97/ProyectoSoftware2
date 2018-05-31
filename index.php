@@ -18,7 +18,7 @@
         <option value="EST">Estudiante</option>
     </select></br>
     <input class="form-control" type="text" placeholder="&#128102; Nombre de Usuario." required name="user"></input></br>
-    <input class="form-control" type="password" placeholder="&#128274; Contraseña" required name="pass"></input>
+    <input class="form-control" type="password" placeholder="&#128274; Contraseña de Usuario:" required name="pass"></input>
     <h2 style = "color: #0000FF; font-size: 80%"; align="right"> ¿Olvidó su contraseña? </h2>
     <input class="btn btn-primary" type="submit"  value="Log-In">
 </form>
