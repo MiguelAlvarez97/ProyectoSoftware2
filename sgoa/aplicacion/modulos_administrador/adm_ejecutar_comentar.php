@@ -5,6 +5,7 @@ require '../clases_negocio/funciones_oa_profesor.php';
 $id_objeto_aprendizaje = filter_input(INPUT_POST, 'id_objeto_aprendizaje');
 $contenido = filter_input(INPUT_POST, 'contenido');
 
+<<<<<<< HEAD
 $carpeta = "../../imagenes/";
 opendir($carpeta);
 $destino = $carpeta.$_FILES['file']['name'];
@@ -18,6 +19,15 @@ $target_file = $carpeta .urlencode($path);
 //$target_file = urlencode($destino2);
 
 if (insertar_comentario($contenido, $_SESSION['id'], $id_objeto_aprendizaje, $target_file)) {
+=======
+$carpeta = "imagenes/";
+opendir($carpeta);
+$destino = $carpeta.$_FILES['file']['name'];
+copy($_FILES['file']['tmp_name'], $destino);
+$nombre = $_FILES['file']['name'];
+
+if (insertar_comentario($contenido, $_SESSION['id'], $id_objeto_aprendizaje)) {
+>>>>>>> master
 
     echo '<script charset="UTF-8">alert("Su comentario se inserto correctamente")</script> ';
     echo '<script>location.href = "adm_comentarios.php?id=' . $id_objeto_aprendizaje . '"</script>';

@@ -16,6 +16,24 @@ if (@!$_SESSION['usuario']) {
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es">
 <head>
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<<<<<<< HEAD
+=======
+    <script>
+        $(function(){
+            $("#file").on("change", function(){
+                $("#vista-previa").html('');
+                var archivos = document.getElementById('file').files;
+                var navegador = window.URL || window.webkitURL;
+                
+                var objeto_url = navegador.createObjetcUrl(archivos);
+                $("#vista-previa").append("<img src="+objeto_url+" width = '100' height= '100'>");
+                
+            });
+        });
+
+    </script>
+
+>>>>>>> master
     <meta charset="utf-8"></meta>
     <link rel="stylesheet" href="../../plugins/bootstrap/css/bootstrap.min.css"></link>
     <script type="text/javascript" src="../../plugins/bootstrap/js/jquery-3.3.1.js"></script>
@@ -33,7 +51,13 @@ if (@!$_SESSION['usuario']) {
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+<<<<<<< HEAD
     .row.content {height: 390px}
+=======
+    .row.content {
+        height: 390px
+    }
+>>>>>>> master
 
     /* Set gray background color and 100% height */
     .sidenav {
@@ -43,6 +67,7 @@ if (@!$_SESSION['usuario']) {
     }
 
     /* Set black background color, white text and some padding */
+<<<<<<< HEAD
     html{
         min-height: 100%;
         position: relative;
@@ -51,6 +76,18 @@ if (@!$_SESSION['usuario']) {
         margin:0;
         margin-bottom: 40px;
     }
+=======
+    html {
+        min-height: 100%;
+        position: relative;
+    }
+
+    body {
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+>>>>>>> master
     /* Set black background color, white text and some padding */
     footer {
         background-color: #555;
@@ -66,6 +103,7 @@ if (@!$_SESSION['usuario']) {
         .sidenav {
             height: auto;
             padding: 15px;
+<<<<<<< HEAD
         }
         .row.content {height:auto;}
     }
@@ -156,10 +194,13 @@ if (@!$_SESSION['usuario']) {
     @media only screen and (max-width: 700px){
         .modal-content {
             width: 100%;
+=======
+>>>>>>> master
         }
     }
 </style>
 
+<<<<<<< HEAD
 
 <body>
 
@@ -263,6 +304,76 @@ $objeto_de_aprendizaje = obtener_oa_como_arreglo($id_objeto_aprendizaje);
                     }
                 </script>
 
+=======
+        .row.content {
+            height: auto;
+        }
+    }
+</style>
+
+
+<body>
+
+<?php include './navbar_adm_obj_apr.php'; ?>
+<!--Inicio de formulario -->
+<?php
+require_once '../clases_negocio/clase_conexion.php';
+require '../clases_negocio/funciones_oa_profesor.php';
+$id_objeto_aprendizaje = filter_input(INPUT_GET, 'id');
+
+//extract($_GET);
+$objeto_de_aprendizaje = obtener_oa_como_arreglo($id_objeto_aprendizaje);
+
+?>
+
+<div class="container">
+    <div class="well text-center">
+        <h2><?php echo $objeto_de_aprendizaje['nombre'] ?></h2>
+        <p><?php echo $objeto_de_aprendizaje['descripcion'] ?></p>
+        <div style="text-align:right">
+            <p><?php echo $objeto_de_aprendizaje['fechaCreacion'] ?></p>
+        </div>
+    </div>
+
+    <div class="table-responsive-sm">
+        <table class="table thead-light">
+            <div class="col-sm-6 col-sm-offset-3">
+                <thead class="th">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Comentario</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Fecha</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $statement = "select * from comentario where id_objeto_aprendizaje=?";
+                $conexion = new Conexion();
+                $consulta = $conexion->prepare($statement);
+                $consulta->setFetchMode(PDO::FETCH_ASSOC);
+                $consulta->execute([$id_objeto_aprendizaje]);
+                $timezone = date('m/d/Y h:i:s');
+
+
+                if ($consulta->rowCount() != 0) {
+                    while ($comentario = $consulta->fetch()) {
+                        echo '<tr class="">';
+                        echo '<th scope="row text-center">' . $comentario['idcomentario'] . '</th>';
+                        echo '<td>' . $comentario['contenido'] . '</td>';
+                        if (obtener_tipo_usuario_con_id($comentario['idusuario']) == 'ADM') {
+                            echo '<td>Administrador</td>';
+                        } else {
+                            $profesor = obtener_profesor_como_arreglo(obtener_id_profesor_con_id_usuario($comentario['idusuario']));
+                            echo '<td>' . $profesor['nombres'] . ' ' . $profesor['apellidos'] . '</td>';
+                        }
+                        echo '<td>' . $timezone . '</td>';
+                        echo '</tr>';
+                    }
+                }
+                ?>
+
+>>>>>>> master
                 </tbody>
             </div>
 
@@ -295,7 +406,11 @@ $objeto_de_aprendizaje = obtener_oa_como_arreglo($id_objeto_aprendizaje);
 
 
 <footer class="label-default container-fluid text-center">
+<<<<<<< HEAD
     <p class="copyright small">Copyright &copy; Jaime Crespin, Jossué Dután, Alexis Maldonado 2018</p>
+=======
+    <p class="copyright small">Copyright &copy; Miguel Alvarez, Jossué Dután, Alexis Maldonado, Alex Ulloa 2018</p>
+>>>>>>> master
 </footer>
 </body>
 
