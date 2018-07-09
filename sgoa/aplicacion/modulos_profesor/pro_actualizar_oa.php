@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (@!$_SESSION['usuario']) {
-    header("Location:../../index.php");
+    header("Location:../../index2.php");
 } elseif ($_SESSION['tipo_usuario'] == 'EST') {
     //header("Location:index2.php");
     echo "eres estudiante";
@@ -139,8 +139,8 @@ if (@!$_SESSION['usuario']) {
             </div>
         </div></br></br></br>
 
-        <footer class="container-fluid text-center">
-            <p>Diseño y programación: Elsa Vasco, Edison Tamayo, José Criollo</p>
+        <footer class="label-default container-fluid text-center">
+            <p class="copyright small">Copyright &copy; Jaime Crespin, Jossué Dután, Alexis Maldonado 2018</p>
         </footer>
 
         <script>
