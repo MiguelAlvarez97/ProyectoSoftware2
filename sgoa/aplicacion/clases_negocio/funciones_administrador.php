@@ -44,6 +44,7 @@ function eliminar_objetos_aprendizaje_asociados_a_id($id_usuario)
     }
 
 
+<<<<<<< HEAD
 }
 
 function enviar_mail($mail, $usuario, $contrasenia)
@@ -60,6 +61,24 @@ function enviar_mail($mail, $usuario, $contrasenia)
     }
 }
 
+=======
+}
+
+function enviar_mail($mail, $usuario, $contrasenia)
+{
+    $to = ''. $mail . '';
+    $subject = 'Hello from SGOA!';
+    $message = 'Usuario:' . $usuario . '
+    Password:' . $contrasenia . '';
+    $headers = "From: objetosaprendizaje593@gmail.com\r\n";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "SUCCESS";
+    } else {
+        echo "ERROR";
+    }
+}
+
+>>>>>>> master
 function enviar_mail2($mail, $usuario, $contrasenia)
 {
     $titulo = 'Credenciales de acceso al sistema SGOA';
@@ -80,5 +99,4 @@ function enviar_mail2($mail, $usuario, $contrasenia)
     }
     mail($mail, $titulo, $mensaje, $cabeceras);
 }
-
 ?>

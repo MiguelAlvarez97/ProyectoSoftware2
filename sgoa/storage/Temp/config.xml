@@ -1,4 +1,18 @@
 <?xml version="1.0"?>
+<<<<<<< HEAD
+<theme>
+    <name>Tknika</name>
+    <version>1.0</version>
+    <compatibility>2.0+</compatibility>
+    <author>Ikuspe Sormen Estudioa</author>
+    <author-url>http://www.ikuspe.com</author-url>
+	<license>Creative Commons by-sa</license>
+	<license-url>http://creativecommons.org/licenses/by-sa/3.0/</license-url>
+	<description>Plantilla realizada por Ikuspe Estudio Creativo (www.ikuspe.com) tomando como base una plantilla creada por Ignacio Gros. </description>
+    <extra-head><![CDATA[<meta name="viewport" content="width=device-width, initial-scale=1" />
+]]></extra-head>
+    <extra-body><![CDATA[<script type="text/javascript" src="tknika_js.js"></script>]]></extra-body>
+=======
 <theme >
     <name>INTEF</name>
     <version>2.0</version>
@@ -14,4 +28,5 @@
     <langs lang="en">
 		<description>This theme was originally created for INTEF (Instituto Nacional de Tecnologías Educativas y de Formación), Ministerio de Educación, Cultura y Deporte (Spanish Government). Original design by Aurelio Lorenzo. Adapted by Ignacio Gros. Features: Hide/Show iDevices, responsive design.</description>
 	</langs>
+>>>>>>> master
 </theme>
