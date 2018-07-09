@@ -1,2 +1,2 @@
-# ProyectoSoftware2
-Objetos de Aprendizaje
+# ProyectoLibres
+Aplicación de Gestión de Objetos de Aprendizaje
