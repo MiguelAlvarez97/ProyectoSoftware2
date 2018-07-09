@@ -3,11 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
-<<<<<<< HEAD
--- Tiempo de generación: 08-07-2018 a las 21:50:54
-=======
 -- Tiempo de generación: 06-03-2018 a las 02:36:49
->>>>>>> master
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -21,11 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
-<<<<<<< HEAD
--- Base de datos: `sgoa`
-=======
 -- Base de datos: `goa_v2`
->>>>>>> master
 --
 
 -- --------------------------------------------------------
@@ -34,46 +26,24 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `comentario`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `comentario`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `comentario` (
   `idcomentario` int(11) NOT NULL AUTO_INCREMENT,
   `contenido` varchar(500) DEFAULT NULL,
   `idusuario` int(11) DEFAULT NULL,
   `id_objeto_aprendizaje` int(11) DEFAULT NULL,
-<<<<<<< HEAD
-  `fechacomentario` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `rutaimagen` varchar(100) DEFAULT NULL,
-=======
->>>>>>> master
   PRIMARY KEY (`idcomentario`),
   KEY `fk_comentario_usuario1_idx` (`idusuario`),
   KEY `fk_comentario_objeto_aprendizaje1_idx` (`id_objeto_aprendizaje`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
-<<<<<<< HEAD
---
--- Volcado de datos para la tabla `comentario`
---
-
-INSERT INTO `comentario` (`idcomentario`, `contenido`, `idusuario`, `id_objeto_aprendizaje`, `fechacomentario`, `rutaimagen`) VALUES
-(4, 'asdasd', 28, 92, '2018-07-08 19:51:19', '../../imagenes/Captura.PNG'),
-(5, 'asdasdas', 28, 92, '2018-07-08 20:47:06', '../../imagenes/Captura1.PNG');
-
-=======
->>>>>>> master
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `departamento`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `departamento`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `departamento` (
   `iddepartamento` int(11) NOT NULL AUTO_INCREMENT,
   `departamento` varchar(45) DEFAULT NULL,
@@ -109,10 +79,7 @@ INSERT INTO `departamento` (`iddepartamento`, `departamento`) VALUES
 -- Estructura de tabla para la tabla `estudiante`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `estudiante`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `estudiante` (
   `idestudiante` int(11) NOT NULL AUTO_INCREMENT,
   `ci` varchar(45) DEFAULT NULL,
@@ -125,18 +92,7 @@ CREATE TABLE IF NOT EXISTS `estudiante` (
   PRIMARY KEY (`idestudiante`),
   KEY `fk_estudiante_usuario1_idx` (`id_usuario`),
   KEY `fk_estudiante_facultad1_idx` (`id_facultad`)
-<<<<<<< HEAD
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
-
---
--- Volcado de datos para la tabla `estudiante`
---
-
-INSERT INTO `estudiante` (`idestudiante`, `ci`, `nombres`, `apellidos`, `carrera`, `id_facultad`, `mail`, `id_usuario`) VALUES
-(10, '1317051587', 'Jaime', 'Crespin', 'Sistemas', 8, 'jaimeloco3@gmail.com', 27);
-=======
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
->>>>>>> master
 
 -- --------------------------------------------------------
 
@@ -144,10 +100,7 @@ INSERT INTO `estudiante` (`idestudiante`, `ci`, `nombres`, `apellidos`, `carrera
 -- Estructura de tabla para la tabla `facultad`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `facultad`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `facultad` (
   `idfacultad` int(11) NOT NULL AUTO_INCREMENT,
   `facultad` varchar(45) DEFAULT NULL,
@@ -176,10 +129,7 @@ INSERT INTO `facultad` (`idfacultad`, `facultad`) VALUES
 -- Estructura de tabla para la tabla `objeto_aprendizaje`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `objeto_aprendizaje`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `objeto_aprendizaje` (
   `idobjeto_aprendizaje` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) DEFAULT NULL,
@@ -192,18 +142,7 @@ CREATE TABLE IF NOT EXISTS `objeto_aprendizaje` (
   `ruta` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idobjeto_aprendizaje`),
   KEY `fk_objeto_aprendizaje_usuario1_idx` (`id_usuario`)
-<<<<<<< HEAD
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=93 ;
-
---
--- Volcado de datos para la tabla `objeto_aprendizaje`
---
-
-INSERT INTO `objeto_aprendizaje` (`idobjeto_aprendizaje`, `nombre`, `descripcion`, `id_usuario`, `institucion`, `fechaCreacion`, `palabras_clave`, `tamanio`, `ruta`) VALUES
-(92, 'IntroSoftware', 'Introduccion al Software', 1, 'EPN', '2018-07-08 19:19:17', 'IS2', '179039', '../../storage/IntroSoftware.zip');
-=======
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
->>>>>>> master
 
 -- --------------------------------------------------------
 
@@ -211,10 +150,7 @@ INSERT INTO `objeto_aprendizaje` (`idobjeto_aprendizaje`, `nombre`, `descripcion
 -- Estructura de tabla para la tabla `profesor`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `profesor`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `profesor` (
   `idprofesor` int(11) NOT NULL AUTO_INCREMENT,
   `ci` varchar(10) DEFAULT NULL,
@@ -228,18 +164,7 @@ CREATE TABLE IF NOT EXISTS `profesor` (
   KEY `fk_profesor_usuario_idx` (`id_usuario`),
   KEY `fk_profesor_departamento1_idx` (`id_departamento`),
   KEY `fk_profesor_facultad1_idx` (`id_facultad`)
-<<<<<<< HEAD
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Volcado de datos para la tabla `profesor`
---
-
-INSERT INTO `profesor` (`idprofesor`, `ci`, `nombres`, `apellidos`, `id_departamento`, `id_facultad`, `mail`, `id_usuario`) VALUES
-(1, '1317051587', 'Jose', 'Rodriguez', 6, 9, 'danielcv1903@gmail.com', 28);
-=======
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
->>>>>>> master
 
 -- --------------------------------------------------------
 
@@ -247,10 +172,7 @@ INSERT INTO `profesor` (`idprofesor`, `ci`, `nombres`, `apellidos`, `id_departam
 -- Estructura de tabla para la tabla `usuario`
 --
 
-<<<<<<< HEAD
-=======
 DROP TABLE IF EXISTS `usuario`;
->>>>>>> master
 CREATE TABLE IF NOT EXISTS `usuario` (
   `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(45) DEFAULT NULL,
@@ -258,24 +180,14 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo_usuario` varchar(3) DEFAULT NULL,
   `activo` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`)
-<<<<<<< HEAD
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
-=======
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
->>>>>>> master
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`idUsuario`, `usuario`, `contrasenia`, `tipo_usuario`, `activo`) VALUES
-<<<<<<< HEAD
-(1, 'admin', 'admin', 'ADM', 'V'),
-(27, 'MrJames1903', 'nias12345', 'EST', 'V'),
-(28, 'JoseRodriguez0', 'qyybZ', 'PRO', 'V');
-=======
 (1, 'admin', 'admin', 'ADM', 'V');
->>>>>>> master
 
 --
 -- Restricciones para tablas volcadas

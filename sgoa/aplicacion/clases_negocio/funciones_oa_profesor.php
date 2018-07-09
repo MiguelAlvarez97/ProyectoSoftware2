@@ -84,22 +84,6 @@ function obtener_oa_como_arreglo($id_objeto_aprendizaje) {
     }
 }
 
-function consultarNombreUsuario($id_usuario){
-    $conexion = new Conexion();
-    $statement = 'select usuario from usuario where idusuario=?';
-    $consulta = $conexion->prepare($statement);
-    $consulta->setFetchMode(PDO::FETCH_ASSOC);
-    $consulta->execute([$id_usuario]);
-    if ($consulta->rowCount() != 0) {
-        $fila = $consulta->fetch();
-    }
-    if (isset($fila)) {
-        return $fila;
-    } else {
-        return null;
-    }
-}
-
 function actualizar_oa($id_objeto_aprendizaje, $nombre, $descripcion, $institucion, $palabras_clave) {
     //actualiazcion en storage
     $nombre_original = obtener_oa_como_arreglo($id_objeto_aprendizaje)['nombre'];
@@ -128,14 +112,6 @@ function eliminar_objeto_aprendizaje($id_objeto_aprendizaje) {
     $consulta_del->execute(array($id_objeto_aprendizaje));
 }
 
-
-function eliminarComentario($id_comentario){
-    $statement_del = "DELETE FROM comentario WHERE idcomentario=?";
-    $conexion_del = new Conexion();
-    $consulta_del = $conexion_del->prepare($statement_del);
-    $consulta_del->execute(array($id_comentario));
-}
-
 function obtener_lista_de_oas() {
     $conexion = new Conexion();
     $statement = 'select nombre from objeto_aprendizaje';
@@ -152,11 +128,11 @@ function obtener_lista_de_oas() {
 }
 
 //inicio funciones de comentario
-function insertar_comentario($contenido, $idusuario, $id_objeto_aprendizaje, $rutaimagen) {
+function insertar_comentario($contenido, $idusuario, $id_objeto_aprendizaje) {
     $conexion = new Conexion();
-    $statement = 'INSERT INTO comentario (contenido,idusuario,id_objeto_aprendizaje, rutaimagen) VALUES (?, ?, ?, ?)';
+    $statement = 'INSERT INTO comentario (contenido,idusuario,id_objeto_aprendizaje) VALUES (?, ?, ?)';
     $consulta = $conexion->prepare($statement);
-    if ($consulta->execute(array($contenido, $idusuario, $id_objeto_aprendizaje, $rutaimagen))) {
+    if ($consulta->execute(array($contenido, $idusuario, $id_objeto_aprendizaje))) {
         return true;
     } else {
         return false;
@@ -237,7 +213,7 @@ function generar_cadena_aleatoria($length = 5) {
         $cadena_aleatoria .= $caracteres[rand(0, $longitud_caracteres - 1)];
     }
     return $cadena_aleatoria;
-}
+} 
 
 function generar_usuario_profesor($nombre, $apellido){
     $nombre1=explode(' ',$nombre)[0];
@@ -257,7 +233,7 @@ function generar_usuario_profesor($nombre, $apellido){
         return $usuario;
     } else {
         return null;
-
+        
     }
 }
 
