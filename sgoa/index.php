@@ -144,11 +144,7 @@
 
         <div class="row">
             <div class="col-lg-6">
-<<<<<<< HEAD
-                <h2>Proyecto de Ingenieria de Software 2</h2>
-=======
                 <h2>Proyecto de Aplicaciones en Ambientes Libres</h2>
->>>>>>> master
             </div>
             <div class="col-lg-6">
                 <ul class="list-inline banner-social-buttons">
