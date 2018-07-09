@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<instance xmlns="http://www.exelearning.org/content/v0.3" reference="5" version="0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.exelearning.org/content/v0.3 content.xsd" class="exe.engine.package.Package">
+<instance xmlns="http://www.exelearning.org/content/v0.3" reference="12" version="0.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://www.exelearning.org/content/v0.3 content.xsd" class="exe.engine.package.Package">
  <dictionary>
   <string role="key" value="_title"></string>
   <unicode value=""></unicode>
@@ -23,7 +23,7 @@
   <string role="key" value="_isChanged"></string>
   <bool value="0"></bool>
   <string role="key" value="_lang"></string>
-  <unicode value="es"></unicode>
+  <string value="es"></string>
   <string role="key" value="_learningResourceType"></string>
   <unicode value=""></unicode>
   <string role="key" value="_levelNames"></string>
@@ -33,9 +33,9 @@
    <unicode value="Unit"></unicode>
   </list>
   <string role="key" value="_name"></string>
-  <unicode value="refactorizacion"></unicode>
+  <unicode value="softwareLibre"></unicode>
   <string role="key" value="_nextIdeviceId"></string>
-  <int value="4"></int>
+  <int value="5"></int>
   <string role="key" value="_nextNodeId"></string>
   <int value="1"></int>
   <string role="key" value="_nodeIdDict"></string>
@@ -44,23 +44,23 @@
    <instance class="exe.engine.node.Node" reference="3">
     <dictionary>
      <string role="key" value="_title"></string>
-     <unicode value="Inicio"></unicode>
+     <unicode value="Software Libre"></unicode>
      <string role="key" value="idevices"></string>
      <list>
       <instance class="exe.engine.genericidevice.GenericIdevice" reference="1">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="REFACTORIZAR: PAGAR LA DEUDA TÉCNICA"></unicode>
+        <unicode value="Qué es?"></unicode>
         <string role="key" value="_author"></string>
         <unicode value="University of Auckland"></unicode>
         <string role="key" value="_purpose"></string>
-        <unicode value="Objectives describe the expected outcomes of the learning and should
-define what the learners will be able to do when they have completed the
-learning tasks."></unicode>
+        <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
         <string role="key" value="_tip"></string>
         <unicode value=""></unicode>
         <string role="key" value="class_"></string>
-        <unicode value="objectives"></unicode>
+        <unicode value="activity"></unicode>
         <string role="key" value="edit"></string>
         <bool value="0"></bool>
         <string role="key" value="emphasis"></string>
@@ -72,22 +72,23 @@ learning tasks."></unicode>
          <instance class="exe.engine.field.TextAreaField" reference="2">
           <dictionary>
            <string role="key" value="_id"></string>
-           <unicode value="105_2"></unicode>
+           <unicode value="41_2"></unicode>
            <string role="key" value="_idevice"></string>
            <reference key="1"></reference>
            <string role="key" value="_instruc"></string>
-           <unicode value="Type the learning objectives for this resource."></unicode>
+           <unicode value="Describe the tasks the learners should complete."></unicode>
            <string role="key" value="_name"></string>
-           <unicode value="Objectives"></unicode>
+           <unicode value="Activity"></unicode>
            <string role="key" value="anchor_names"></string>
            <list></list>
            <string role="key" value="anchors_linked_from_fields"></string>
            <dictionary></dictionary>
            <string role="key" value="content_w_resourcePaths"></string>
-           <unicode content="true" value="&lt;p&gt;Objetivos:&lt;/p&gt;
-&lt;p&gt;Definir ¿Que es la deuda tecnica?&lt;/p&gt;
-&lt;p&gt;Determinar los casos donde aplica el concepto de &quot;Deuda Tecnica&quot;&lt;/p&gt;
-&lt;p&gt;Definir ¿Que es la refactorizacion?&lt;/p&gt;"></unicode>
+           <unicode content="true" value="&lt;blockquote&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;La definición de software libre estipula los criterios que se tienen que cumplir para que un programa sea considerado libre. De vez en cuando modificamos esta definición para clarificarla o para resolver problemas sobre cuestiones delicadas. Más abajo en esta página, en la sección&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/philosophy/free-sw.es.html#History&quot;&gt;Historial&lt;/a&gt;, se puede consultar la lista de modificaciones que afectan la definición de software libre.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;«Software libre» es el software que respeta la libertad de los usuarios y la comunidad. A grandes rasgos, significa que&lt;span&gt; &lt;/span&gt;&lt;b&gt;los usuarios tienen la libertad de ejecutar, copiar, distribuir, estudiar, modificar y mejorar el software&lt;/b&gt;. Es decir, el «software libre» es una cuestión de libertad, no de precio. Para entender el concepto, piense en «libre» como en «libre expresión», no como en «barra libre». En inglés, a veces en lugar de «free software» decimos «libre software», empleando ese adjetivo francés o español, derivado de «libertad», para mostrar que no queremos decir que el software es gratuito.&lt;/p&gt;
+&lt;p style=&quot;text-align: justify;&quot;&gt;Promovemos estas libertades porque todos merecen tenerlas. Con estas libertades, los usuarios (tanto individualmente como en forma colectiva) controlan el programa y lo que este hace. Cuando los usuarios no controlan el programa, decimos que dicho programa «no es libre», o que es «privativo». Un programa que no es libre controla a los usuarios, y el programador controla el programa, con lo cual el programa resulta ser&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/philosophy/free-software-even-more-important.html&quot;&gt;un instrumento de poder injusto&lt;/a&gt;.&lt;/p&gt;"></unicode>
            <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
            <int value="4"></int>
            <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
@@ -110,12 +111,12 @@ learning tasks."></unicode>
            <string role="key" value="nextImageId"></string>
            <int value="0"></int>
            <string role="key" value="parentNode"></string>
-           <reference key="3"></reference>
+           <none></none>
           </dictionary>
          </instance>
         </list>
         <string role="key" value="icon"></string>
-        <unicode value="objectives"></unicode>
+        <unicode value="activity"></unicode>
         <string role="key" value="id"></string>
         <unicode value="0"></unicode>
         <string role="key" value="lastIdevice"></string>
@@ -123,7 +124,7 @@ learning tasks."></unicode>
         <string role="key" value="nextFieldId"></string>
         <int value="3"></int>
         <string role="key" value="originalicon"></string>
-        <unicode value="objectives"></unicode>
+        <unicode value="activity"></unicode>
         <string role="key" value="parentNode"></string>
         <reference key="3"></reference>
         <string role="key" value="systemResources"></string>
@@ -138,461 +139,370 @@ learning tasks."></unicode>
         <int value="0"></int>
        </dictionary>
       </instance>
-      <instance class="exe.engine.freetextidevice.FreeTextIdevice" reference="4">
+      <instance class="exe.engine.genericidevice.GenericIdevice" reference="4">
        <dictionary>
         <string role="key" value="_title"></string>
-        <unicode value="Free Text"></unicode>
+        <unicode value="Las cuatro libertades esenciales"></unicode>
         <string role="key" value="_author"></string>
         <unicode value="University of Auckland"></unicode>
         <string role="key" value="_purpose"></string>
-        <unicode value="The majority of a learning resource will be 
-establishing context, delivering instructions and providing general information.
-This provides the framework within which the learning activities are built and 
-delivered."></unicode>
+        <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
         <string role="key" value="_tip"></string>
-        <string value=""></string>
-        <string role="key" value="childs"></string>
-        <list></list>
-        <string role="key" value="content"></string>
-        <instance class="exe.engine.field.TextAreaField" reference="6">
-         <dictionary>
-          <string role="key" value="_id"></string>
-          <int value="86"></int>
-          <string role="key" value="_idevice"></string>
-          <reference key="4"></reference>
-          <string role="key" value="_instruc"></string>
-          <unicode value="Use this field to enter text. This 
-iDevice has no emphasis applied although limited formatting can be applied to 
-text through the text editing buttons associated with the field."></unicode>
-          <string role="key" value="_name"></string>
-          <unicode value="Free Text"></unicode>
-          <string role="key" value="anchor_names"></string>
-          <list></list>
-          <string role="key" value="anchors_linked_from_fields"></string>
-          <dictionary></dictionary>
-          <string role="key" value="content_w_resourcePaths"></string>
-          <unicode content="true" value="&lt;p&gt;Al igual que una casa con una hipoteca, el software tiene deudas que deben pagarse.&lt;/p&gt;
-&lt;p&gt;Por ejemplo: un cliente para el que desarrolló una aplicación, le llama para incorporar nuevas funcionalidades. Luego de la negociación ud empieza a trabajar. El código de su sistema está en varios computadores, por lo que cada cambio debe replicarlo en todas ellas. Además, el código base es muy difícil de entenderlo, y el programador que lo hizo ya no trabaja en su empresa. Sin embargo, ese código puso su empresa en producción y hay que mantenerlo. para hacer esto bien, usted va a necesitar varios días para limpiar el código base existente antes de comenzar a agregar las nuevas funcionalidades.&lt;/p&gt;
-&lt;p&gt;Deuda técnica es la acumulación continua de atajos, cortes, duplicación y otros pecados que regularmente cometemos en contra de nuestro código base para ser más rápidos y cumplir el cronograma. Puede tomar muchas formas (código de espagueti, complejidad excesiva, duplicación y descuido general). Cada transgresión contra el código inicialmente puede parecer pequeña o insignificante. Pero como todas las formas de deuda, es el efecto acumulativo que se da en el tiempo el que duele.&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;resources/deuda.png&quot; alt=&quot;cuadro deuda tecnica&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;696&quot; height=&quot;533&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;¿Qué es la refactorización?&lt;/p&gt;
-&lt;p&gt;Refactorización es la práctica de hacer continuamente pequeños, incrementales mejoras en el diseño de su software sin cambiar el comportamiento externo.&lt;/p&gt;
-&lt;p&gt;Es una manera de pagar sistemáticamente nuestra deuda técnica a medida que avanzamos.&lt;/p&gt;
-&lt;p&gt;Es una manera de mejorar y mantener la integridad y el diseño de nuestro software que nos permita alcanzar los objetivos de hoy y estar en una buena posición para manejar los desafíos aún desconocidos del mañana.&lt;/p&gt;
-&lt;p&gt;Cuando se refactoriza un código, no se agrega nueva funcionalidad ni se corrige errores, se mejora la comprensibilidad del código&lt;br /&gt; haciéndole más fácil de comprender y más susceptible de cambios.&lt;/p&gt;
-&lt;p&gt;Cada vez que se cambia el nombre de un método o variable mal nombrados en un esfuerzo por hacer que sea más fácil de leer y entender, se está refactorizando. Ejemplo:&lt;/p&gt;
-&lt;p&gt;decimal sal; à decimal salario; [Renombrar variable]&lt;/p&gt;
-&lt;p&gt;public decimal Calc()  àpublic decimal CalcularImpuestoTotal() [Renombrar método]&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;resources/refac.png&quot; alt=&quot;refactorizacion&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; width=&quot;881&quot; height=&quot;545&quot; /&gt;&lt;/p&gt;"></unicode>
-          <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-          <int value="4"></int>
-          <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-          <int value="2"></int>
-          <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-          <int value="3"></int>
-          <string role="key" value="htmlTag"></string>
-          <string value="div"></string>
-          <string role="key" value="images"></string>
-          <instance class="exe.engine.galleryidevice.GalleryImages">
-           <dictionary>
-            <string role="key" value=".listitems"></string>
-            <list>
-             <instance class="exe.engine.galleryidevice.GalleryImage">
-              <dictionary>
-               <string role="key" value="_caption"></string>
-               <instance class="exe.engine.field.TextField">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <int value="215"></int>
-                 <string role="key" value="_idevice"></string>
-                 <none></none>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="content"></string>
-                 <string value=""></string>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                </dictionary>
-               </instance>
-               <string role="key" value="_id"></string>
-               <unicode value="1_86.2"></unicode>
-               <string role="key" value="_imageResource"></string>
-               <instance class="exe.engine.resource.Resource" reference="7">
-                <dictionary>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="4"></reference>
-                 <string role="key" value="_package"></string>
-                 <reference key="5"></reference>
-                 <string role="key" value="_storageName"></string>
-                 <string value="deuda.png"></string>
-                 <string role="key" value="_userName"></string>
-                 <string value="c:\\users\\inkisi~1\\appdata\\local\\temp\\tmpxhmeaa\\deuda.png"></string>
-                 <string role="key" value="checksum"></string>
-                 <string value="de47e53d4aeac0ec27fae728d1fd0336"></string>
-                 <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="warningMsg"></string>
-                 <string value=""></string>
-                </dictionary>
-               </instance>
-               <string role="key" value="_parent"></string>
-               <reference key="6"></reference>
-               <string role="key" value="_thumbnailResource"></string>
-               <none></none>
-               <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-               <int value="3"></int>
-               <string role="key" value="makeThumbnail"></string>
-               <bool value="0"></bool>
-              </dictionary>
-             </instance>
-             <instance class="exe.engine.galleryidevice.GalleryImage">
-              <dictionary>
-               <string role="key" value="_caption"></string>
-               <instance class="exe.engine.field.TextField">
-                <dictionary>
-                 <string role="key" value="_id"></string>
-                 <int value="216"></int>
-                 <string role="key" value="_idevice"></string>
-                 <none></none>
-                 <string role="key" value="_instruc"></string>
-                 <string value=""></string>
-                 <string role="key" value="_name"></string>
-                 <string value=""></string>
-                 <string role="key" value="content"></string>
-                 <string value=""></string>
-                 <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-                 <int value="4"></int>
-                </dictionary>
-               </instance>
-               <string role="key" value="_id"></string>
-               <unicode value="1_86.3"></unicode>
-               <string role="key" value="_imageResource"></string>
-               <instance class="exe.engine.resource.Resource" reference="8">
-                <dictionary>
-                 <string role="key" value="_idevice"></string>
-                 <reference key="4"></reference>
-                 <string role="key" value="_package"></string>
-                 <reference key="5"></reference>
-                 <string role="key" value="_storageName"></string>
-                 <string value="refac.png"></string>
-                 <string role="key" value="_userName"></string>
-                 <string value="c:\\users\\inkisi~1\\appdata\\local\\temp\\tmpxhmeaa\\refac.png"></string>
-                 <string role="key" value="checksum"></string>
-                 <string value="db6fbea6ea756946efadfc349ef7a041"></string>
-                 <string role="key" value="exe.engine.resource.Resource.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="exe.engine.resource._Resource.persistenceVersion"></string>
-                 <int value="2"></int>
-                 <string role="key" value="warningMsg"></string>
-                 <string value=""></string>
-                </dictionary>
-               </instance>
-               <string role="key" value="_parent"></string>
-               <reference key="6"></reference>
-               <string role="key" value="_thumbnailResource"></string>
-               <none></none>
-               <string role="key" value="exe.engine.galleryidevice.GalleryImage.persistenceVersion"></string>
-               <int value="3"></int>
-               <string role="key" value="makeThumbnail"></string>
-               <bool value="0"></bool>
-              </dictionary>
-             </instance>
-            </list>
-            <string role="key" value="idevice"></string>
-            <reference key="6"></reference>
-           </dictionary>
-          </instance>
-          <string role="key" value="intlinks_to_anchors"></string>
-          <dictionary></dictionary>
-          <string role="key" value="nextImageId"></string>
-          <int value="4"></int>
-          <string role="key" value="parentNode"></string>
-          <reference key="3"></reference>
-         </dictionary>
-        </instance>
-        <string role="key" value="edit"></string>
-        <bool value="0"></bool>
-        <string role="key" value="emphasis"></string>
-        <int value="0"></int>
-        <string role="key" value="exe.engine.freetextidevice.FreeTextIdevice.persistenceVersion"></string>
-        <int value="7"></int>
-        <string role="key" value="icon"></string>
-        <string value=""></string>
-        <string role="key" value="id"></string>
-        <unicode value="1"></unicode>
-        <string role="key" value="lastIdevice"></string>
-        <bool value="0"></bool>
-        <string role="key" value="originalicon"></string>
-        <string value=""></string>
-        <string role="key" value="parent"></string>
-        <none></none>
-        <string role="key" value="parentNode"></string>
-        <reference key="3"></reference>
-        <string role="key" value="systemResources"></string>
-        <list></list>
-        <string role="key" value="type"></string>
-        <none></none>
-        <string role="key" value="undo"></string>
-        <bool value="1"></bool>
-        <string role="key" value="userResources"></string>
-        <list>
-         <reference key="7"></reference>
-         <reference key="8"></reference>
-        </list>
-        <string role="key" value="version"></string>
-        <int value="0"></int>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.externalurlidevice.ExternalUrlIdevice">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="External Web Site"></unicode>
-        <string role="key" value="_author"></string>
-        <unicode value="University of Auckland"></unicode>
-        <string role="key" value="_purpose"></string>
-        <unicode value="The external website iDevice loads an external website 
-into an inline frame in your eXe content rather then opening it in a popup box. 
-This means learners are not having to juggle windows. 
-This iDevice should only be used if your content 
-will be viewed by learners online."></unicode>
-        <string role="key" value="_tip"></string>
-        <string value=""></string>
-        <string role="key" value="_urlInstruc"></string>
-        <unicode value="Enter the URL you wish to display
-and select the size of the area to display it in."></unicode>
-        <string role="key" value="edit"></string>
-        <bool value="0"></bool>
-        <string role="key" value="emphasis"></string>
-        <int value="0"></int>
-        <string role="key" value="exe.engine.externalurlidevice.ExternalUrlIdevice.persistenceVersion"></string>
-        <int value="3"></int>
-        <string role="key" value="height"></string>
-        <unicode value="300"></unicode>
-        <string role="key" value="icon"></string>
-        <string value=""></string>
-        <string role="key" value="id"></string>
-        <unicode value="2"></unicode>
-        <string role="key" value="lastIdevice"></string>
-        <bool value="0"></bool>
-        <string role="key" value="originalicon"></string>
-        <string value=""></string>
-        <string role="key" value="parentNode"></string>
-        <reference key="3"></reference>
-        <string role="key" value="systemResources"></string>
-        <list></list>
-        <string role="key" value="undo"></string>
-        <bool value="1"></bool>
-        <string role="key" value="url"></string>
-        <unicode value="https://www.youtube.com/watch?v=NxqH3WggfQk"></unicode>
-        <string role="key" value="userResources"></string>
-        <list></list>
-        <string role="key" value="version"></string>
-        <int value="0"></int>
-       </dictionary>
-      </instance>
-      <instance class="exe.engine.casestudyidevice.CasestudyIdevice" reference="9">
-       <dictionary>
-        <string role="key" value="_title"></string>
-        <unicode value="Case Study"></unicode>
-        <string role="key" value="_author"></string>
-        <unicode value="University of Auckland"></unicode>
-        <string role="key" value="_feedbackInstruc"></string>
-        <unicode value="Provide relevant feedback on the 
-situation."></unicode>
-        <string role="key" value="_purpose"></string>
-        <unicode value="A case study is a device that provides learners 
-with a simulation that has an educational basis. It takes a situation, generally 
-based in reality, and asks learners to demonstrate or describe what action they 
-would take to complete a task or resolve a situation. The case study allows 
-learners apply their own knowledge and experience to completing the tasks 
-assigned. when designing a case study consider the following:&lt;ul&gt; 
-&lt;li&gt;    What educational points are conveyed in the story&lt;/li&gt;
-&lt;li&gt;    What preparation will the learners need to do prior to working on the 
-case study&lt;/li&gt;
-&lt;li&gt;    Where the case study fits into the rest of the course&lt;/li&gt;
-&lt;li&gt;    How the learners will interact with the materials and each other e.g.
-if run in a classroom situation can teams be setup to work on different aspects
-of the case and if so how are ideas feed back to the class&lt;/li&gt;&lt;/ul&gt;"></unicode>
-        <string role="key" value="_questionInstruc"></string>
-        <unicode value="Describe the activity tasks relevant 
-to the case story provided. These could be in the form of questions or 
-instructions for activity which may lead the learner to resolving a dilemma 
-presented. "></unicode>
-        <string role="key" value="_storyInstruc"></string>
-        <unicode value="Create the case story. A good case is one 
-that describes a controversy or sets the scene by describing the characters 
-involved and the situation. It should also allow for some action to be taken 
-in order to gain resolution of the situation."></unicode>
-        <string role="key" value="_tip"></string>
-        <string value=""></string>
-        <string role="key" value="defaultImage"></string>
-        <unicode value="C:\Users\eddyf\AppData\Local\Temp\exe\images\empty.gif"></unicode>
+        <unicode value=""></unicode>
+        <string role="key" value="class_"></string>
+        <unicode value="activity"></unicode>
         <string role="key" value="edit"></string>
         <bool value="0"></bool>
         <string role="key" value="emphasis"></string>
         <int value="1"></int>
-        <string role="key" value="exe.engine.casestudyidevice.CasestudyIdevice.persistenceVersion"></string>
-        <int value="9"></int>
+        <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+        <int value="11"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="5">
+          <dictionary>
+           <string role="key" value="_id"></string>
+           <unicode value="42_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="4"></reference>
+           <string role="key" value="_instruc"></string>
+           <unicode value="Describe the tasks the learners should complete."></unicode>
+           <string role="key" value="_name"></string>
+           <unicode value="Activity"></unicode>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;p&gt;Un programa es software libre si los usuarios tienen las cuatro libertades esenciales:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La libertad de ejecutar el programa como se desee, con cualquier propósito (libertad 0).&lt;/li&gt;
+&lt;li&gt;La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga lo que usted quiera (libertad 1). El acceso al código fuente es una condición necesaria para ello.&lt;/li&gt;
+&lt;li&gt;La libertad de redistribuir copias para ayudar a su prójimo (libertad 2).&lt;/li&gt;
+&lt;li&gt;La libertad de distribuir copias de sus versiones modificadas a terceros (libertad 3). Esto le permite ofrecer a toda la comunidad la oportunidad de beneficiarse de las modificaciones. El acceso al código fuente es una condición necesaria para ello.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un programa es software libre si otorga a los usuarios todas estas libertades de manera adecuada. De lo contrario no es libre. Existen diversos esquemas de distribución que no son libres, y si bien podemos distinguirlos en base a cuánto les falta para llegar a ser libres, nosotros los consideramos contrarios a la ética a todos por igual.&lt;/p&gt;
+&lt;p&gt;En cualquier circunstancia, estas libertades deben aplicarse a todo código que pensemos utilizar hacer que otros utilicen. Tomemos por ejemplo un programa A que automáticamente ejecuta un programa B para que realice alguna tarea. Si se tiene la intención de distribuir A tal cual, esto implica que los usuarios necesitarán B, de modo que es necesario considerar si tanto A como B son libres. No obstante, si se piensa modificar A para que no haga uso de B, solo A debe ser libre; B no es relevante en este caso.&lt;/p&gt;
+&lt;p&gt;«Software libre» no significa que «no es comercial». Un programa libre debe estar disponible para el uso comercial, la programación comercial y la distribución comercial. La programación comercial de software libre ya no es inusual; el software libre comercial es muy importante. Puede haber pagado dinero para obtener copias de software libre, o puede haber obtenido copias sin costo. Pero sin tener en cuenta cómo obtuvo sus copias, siempre tiene la libertad de copiar y modificar el software, incluso de&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/philosophy/selling.html&quot;&gt;vender copias&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;En el resto de esta página tratamos algunos puntos que aclaran qué es lo que hace que las libertades específicas sean adecuadas o no.&lt;/p&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
+            <dictionary>
+             <string role="key" value=".listitems"></string>
+             <list></list>
+             <string role="key" value="idevice"></string>
+             <reference key="5"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="0"></int>
+           <string role="key" value="parentNode"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+        </list>
         <string role="key" value="icon"></string>
-        <unicode value="casestudy"></unicode>
+        <unicode value="activity"></unicode>
+        <string role="key" value="id"></string>
+        <unicode value="1"></unicode>
+        <string role="key" value="lastIdevice"></string>
+        <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
+        <string role="key" value="originalicon"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="parentNode"></string>
+        <reference key="3"></reference>
+        <string role="key" value="systemResources"></string>
+        <list>
+         <string value="common.js"></string>
+        </list>
+        <string role="key" value="undo"></string>
+        <bool value="1"></bool>
+        <string role="key" value="userResources"></string>
+        <list></list>
+        <string role="key" value="version"></string>
+        <int value="0"></int>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.genericidevice.GenericIdevice" reference="6">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="La libertad de ejecutar el programa como se desee."></unicode>
+        <string role="key" value="_author"></string>
+        <unicode value="University of Auckland"></unicode>
+        <string role="key" value="_purpose"></string>
+        <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
+        <string role="key" value="_tip"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="class_"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="edit"></string>
+        <bool value="0"></bool>
+        <string role="key" value="emphasis"></string>
+        <int value="1"></int>
+        <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+        <int value="11"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="7">
+          <dictionary>
+           <string role="key" value="_id"></string>
+           <unicode value="43_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="6"></reference>
+           <string role="key" value="_instruc"></string>
+           <unicode value="Describe the tasks the learners should complete."></unicode>
+           <string role="key" value="_name"></string>
+           <unicode value="Activity"></unicode>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;p&gt;La libertad de ejecutar el programa significa que cualquier tipo de persona u organización es libre de usarlo en cualquier tipo de sistema de computación, para cualquier tipo de trabajo y finalidad, sin que exista obligación alguna de comunicarlo al programador ni a ninguna otra entidad específica. En esta libertad, lo que importa es el propósito del&lt;em&gt;usuario&lt;/em&gt;, no el del&lt;span&gt; &lt;/span&gt;&lt;em&gt;programador&lt;/em&gt;. Usted como usuario es libre de ejecutar el programa para alcanzar sus propósitos, y si lo distribuye a otra persona, también esa persona será libre de ejecutarlo para lo que necesite; usted no tiene el derecho de imponerle sus propios objetivos a la otra persona.&lt;/p&gt;
+&lt;p&gt;La libertad de ejecutar el programa como se desee significa que al usuario no se le prohíbe o no se le impide ejecutarlo. Esto no tiene nada que ver con el tipo de funcionalidades que el programa posea, ni con su capacidad técnica de funcionar en un entorno dado, ni con el hecho de que el programa sea o no sea útil con relación a una operación computacional determinada.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://flisol.cucea.udg.mx/sites/default/files/ponencias/foftware-libre.jpg&quot; alt=&quot;Resultado de imagen para software libre&quot; style=&quot;display: block; margin-left: auto; margin-right: auto;&quot; /&gt;&lt;/p&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
+            <dictionary>
+             <string role="key" value=".listitems"></string>
+             <list></list>
+             <string role="key" value="idevice"></string>
+             <reference key="7"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="0"></int>
+           <string role="key" value="parentNode"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="icon"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="id"></string>
+        <unicode value="2"></unicode>
+        <string role="key" value="lastIdevice"></string>
+        <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
+        <string role="key" value="originalicon"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="parentNode"></string>
+        <reference key="3"></reference>
+        <string role="key" value="systemResources"></string>
+        <list>
+         <string value="common.js"></string>
+        </list>
+        <string role="key" value="undo"></string>
+        <bool value="1"></bool>
+        <string role="key" value="userResources"></string>
+        <list></list>
+        <string role="key" value="version"></string>
+        <int value="0"></int>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.genericidevice.GenericIdevice" reference="8">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="La libertad de estudiar el código fuente y modificarlo."></unicode>
+        <string role="key" value="_author"></string>
+        <unicode value="University of Auckland"></unicode>
+        <string role="key" value="_purpose"></string>
+        <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
+        <string role="key" value="_tip"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="class_"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="edit"></string>
+        <bool value="0"></bool>
+        <string role="key" value="emphasis"></string>
+        <int value="1"></int>
+        <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+        <int value="11"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="9">
+          <dictionary>
+           <string role="key" value="_id"></string>
+           <unicode value="44_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="8"></reference>
+           <string role="key" value="_instruc"></string>
+           <unicode value="Describe the tasks the learners should complete."></unicode>
+           <string role="key" value="_name"></string>
+           <unicode value="Activity"></unicode>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;p&gt;Para que las libertades 1 y 3 (realizar cambios y publicar las versiones modificadas) tengan sentido, usted debe tener acceso al código fuente del programa. Por consiguiente, el acceso al código fuente es una condición necesaria para el software libre. El «código fuente» ofuscado no es código fuente real y no cuenta como código fuente.&lt;/p&gt;
+&lt;p&gt;La libertad 1 incluye la libertad de usar su versión modificada en lugar de la original. Si el programa se entrega unido a un producto diseñado para ejecutar versiones modificadas por terceros, pero rechaza ejecutar las suyas —práctica conocida como «&lt;i&gt;tivoización&lt;/i&gt;» o «bloqueo», o (según la terminología perversa de quienes lo practican) «arranque seguro»—, la libertad 1 se convierte en una vana simulación más que una realidad práctica. Estos binarios no son software libre, aun cuando se hayan compilado a partir de un código fuente libre.&lt;/p&gt;
+&lt;p&gt;Una manera importante de modificar el programa es agregándole subrutinas y módulos libres ya disponibles. Si la licencia del programa especifica que no se pueden añadir módulos que ya existen y que están bajo una licencia apropiada, por ejemplo si requiere que usted sea el titular del copyright del código que desea añadir, entonces se trata de una licencia demasiado restrictiva como para considerarla libre.&lt;/p&gt;
+&lt;p&gt;Si una modificación constituye o no una mejora, es un asunto subjetivo. Si su derecho a modificar un programa se limita, básicamente, a modificaciones que alguna otra persona considera una mejora, el programa no es libre.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDBe6puTGWUSvFDY22-i6NR7MJYnrNOKLLYZXk31vnkcTOZYGS&quot; alt=&quot;Resultado de imagen para software libre&quot; /&gt;&lt;/p&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
+           <int value="2"></int>
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
+            <dictionary>
+             <string role="key" value=".listitems"></string>
+             <list></list>
+             <string role="key" value="idevice"></string>
+             <reference key="9"></reference>
+            </dictionary>
+           </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="0"></int>
+           <string role="key" value="parentNode"></string>
+           <none></none>
+          </dictionary>
+         </instance>
+        </list>
+        <string role="key" value="icon"></string>
+        <unicode value="activity"></unicode>
         <string role="key" value="id"></string>
         <unicode value="3"></unicode>
         <string role="key" value="lastIdevice"></string>
         <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
         <string role="key" value="originalicon"></string>
-        <unicode value="casestudy"></unicode>
+        <unicode value="activity"></unicode>
         <string role="key" value="parentNode"></string>
         <reference key="3"></reference>
-        <string role="key" value="questions"></string>
+        <string role="key" value="systemResources"></string>
         <list>
-         <instance class="exe.engine.casestudyidevice.Question">
+         <string value="common.js"></string>
+        </list>
+        <string role="key" value="undo"></string>
+        <bool value="1"></bool>
+        <string role="key" value="userResources"></string>
+        <list></list>
+        <string role="key" value="version"></string>
+        <int value="0"></int>
+       </dictionary>
+      </instance>
+      <instance class="exe.engine.genericidevice.GenericIdevice" reference="10">
+       <dictionary>
+        <string role="key" value="_title"></string>
+        <unicode value="La libertad de redistribuir copias si así lo desea: requisitos básicos"></unicode>
+        <string role="key" value="_author"></string>
+        <unicode value="University of Auckland"></unicode>
+        <string role="key" value="_purpose"></string>
+        <unicode value="An activity can be defined as a task or set of tasks a learner must
+complete. Provide a clear statement of the task and consider any conditions
+that may help or hinder the learner in the performance of the task."></unicode>
+        <string role="key" value="_tip"></string>
+        <unicode value=""></unicode>
+        <string role="key" value="class_"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="edit"></string>
+        <bool value="0"></bool>
+        <string role="key" value="emphasis"></string>
+        <int value="1"></int>
+        <string role="key" value="exe.engine.genericidevice.GenericIdevice.persistenceVersion"></string>
+        <int value="11"></int>
+        <string role="key" value="fields"></string>
+        <list>
+         <instance class="exe.engine.field.TextAreaField" reference="11">
           <dictionary>
-           <string role="key" value="questionTextArea"></string>
-           <instance class="exe.engine.field.TextAreaField" reference="10">
-            <dictionary>
-             <string role="key" value="_id"></string>
-             <int value="96"></int>
-             <string role="key" value="_idevice"></string>
-             <reference key="9"></reference>
-             <string role="key" value="_instruc"></string>
-             <unicode value=""></unicode>
-             <string role="key" value="_name"></string>
-             <unicode value=""></unicode>
-             <string role="key" value="anchor_names"></string>
-             <list></list>
-             <string role="key" value="anchors_linked_from_fields"></string>
-             <dictionary></dictionary>
-             <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;p&gt;En base al video colocado en la parte superior, refactorizar al menos una seccion del codigo realizado en clase&lt;/p&gt;"></unicode>
-             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-             <int value="4"></int>
-             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-             <int value="2"></int>
-             <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-             <int value="3"></int>
-             <string role="key" value="htmlTag"></string>
-             <string value="section"></string>
-             <string role="key" value="images"></string>
-             <instance class="exe.engine.galleryidevice.GalleryImages">
-              <dictionary>
-               <string role="key" value=".listitems"></string>
-               <list></list>
-               <string role="key" value="idevice"></string>
-               <reference key="10"></reference>
-              </dictionary>
-             </instance>
-             <string role="key" value="intlinks_to_anchors"></string>
-             <dictionary></dictionary>
-             <string role="key" value="nextImageId"></string>
-             <int value="0"></int>
-             <string role="key" value="parentNode"></string>
-             <reference key="3"></reference>
-            </dictionary>
-           </instance>
-           <string role="key" value="exe.engine.casestudyidevice.Question.persistenceVersion"></string>
+           <string role="key" value="_id"></string>
+           <unicode value="45_2"></unicode>
+           <string role="key" value="_idevice"></string>
+           <reference key="10"></reference>
+           <string role="key" value="_instruc"></string>
+           <unicode value="Describe the tasks the learners should complete."></unicode>
+           <string role="key" value="_name"></string>
+           <unicode value="Activity"></unicode>
+           <string role="key" value="anchor_names"></string>
+           <list></list>
+           <string role="key" value="anchors_linked_from_fields"></string>
+           <dictionary></dictionary>
+           <string role="key" value="content_w_resourcePaths"></string>
+           <unicode content="true" value="&lt;p&gt;La libertad para distribuir (libertades 2 y 3) significa que usted tiene la libertad para redistribuir copias con o sin modificaciones, ya sea gratuitamente o cobrando una tarifa por la distribución, a&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/philosophy/free-sw.es.html#exportcontrol&quot;&gt;cualquiera en cualquier parte&lt;/a&gt;. Ser libre de hacer esto significa, entre otras cosas, que no tiene que pedir ni pagar ningún permiso para hacerlo.&lt;/p&gt;
+&lt;p&gt;También debe tener la libertad de hacer modificaciones y usarlas en privado para su propio trabajo o pasatiempo, sin siquiera mencionar que existen. Si publica sus cambios, no debe estar obligado a notificarlo a nadie en particular, ni de ninguna manera en particular.&lt;/p&gt;
+&lt;p&gt;La libertad 3 incluye la libertad de publicar sus versiones modificadas como software libre. Una licencia libre también puede autorizar otras formas de publicación; en otras palabras, no tiene que ser una licencia con&lt;span&gt; &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/copyleft/copyleft.html&quot;&gt;copyleft&lt;/a&gt;. No obstante, una licencia que requiera que las versiones modificadas no sean libres, no se puede considerar libre.&lt;/p&gt;
+&lt;p&gt;La libertad de redistribuir copias debe incluir las formas binarias o ejecutables del programa, así como el código fuente, tanto para las versiones modificadas como para las que no lo estén. (Distribuir programas en forma de ejecutables es necesario para que los sistemas operativos libres se puedan instalar fácilmente). Resulta aceptable si no existe un modo de producir un formato binario o ejecutable para un programa específico, dado que algunos lenguajes no incorporan esa característica, pero debe tener la libertad de redistribuir dichos formatos si encontrara o programara una forma de hacerlo.&lt;/p&gt;
+&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://cdn.planetared.com/wp-content/uploads/2010/04/openfree.jpg&quot; alt=&quot;Resultado de imagen para software libre&quot; /&gt;&lt;/p&gt;"></unicode>
+           <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
+           <int value="4"></int>
+           <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
            <int value="2"></int>
-           <string role="key" value="feedbackTextArea"></string>
-           <instance class="exe.engine.field.Feedback2Field" reference="11">
+           <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
+           <int value="3"></int>
+           <string role="key" value="htmlTag"></string>
+           <string value="div"></string>
+           <string role="key" value="images"></string>
+           <instance class="exe.engine.galleryidevice.GalleryImages">
             <dictionary>
-             <string role="key" value="_id"></string>
-             <int value="97"></int>
-             <string role="key" value="_idevice"></string>
-             <reference key="9"></reference>
-             <string role="key" value="_instruc"></string>
-             <unicode value=""></unicode>
-             <string role="key" value="_name"></string>
-             <unicode value=""></unicode>
-             <string role="key" value="anchor_names"></string>
+             <string role="key" value=".listitems"></string>
              <list></list>
-             <string role="key" value="anchors_linked_from_fields"></string>
-             <dictionary></dictionary>
-             <string role="key" value="buttonCaption"></string>
-             <unicode value=""></unicode>
-             <string role="key" value="content_w_resourcePaths"></string>
-             <unicode content="true" value="&lt;p&gt;El estudiante luego de esta actividad podra identificar la importancia de la refactorizacion del codigo&lt;/p&gt;"></unicode>
-             <string role="key" value="exe.engine.field.Feedback2Field.persistenceVersion"></string>
-             <int value="1"></int>
-             <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-             <int value="4"></int>
-             <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-             <int value="2"></int>
-             <string role="key" value="feedback"></string>
-             <unicode value="&lt;p&gt;El estudiante luego de esta actividad podra identificar la importancia de la refactorizacion del codigo&lt;/p&gt;"></unicode>
-             <string role="key" value="htmlTag"></string>
-             <string value="div"></string>
-             <string role="key" value="images"></string>
-             <instance class="exe.engine.galleryidevice.GalleryImages">
-              <dictionary>
-               <string role="key" value=".listitems"></string>
-               <list></list>
-               <string role="key" value="idevice"></string>
-               <reference key="11"></reference>
-              </dictionary>
-             </instance>
-             <string role="key" value="intlinks_to_anchors"></string>
-             <dictionary></dictionary>
-             <string role="key" value="nextImageId"></string>
-             <int value="0"></int>
-             <string role="key" value="parentNode"></string>
-             <reference key="3"></reference>
+             <string role="key" value="idevice"></string>
+             <reference key="11"></reference>
             </dictionary>
            </instance>
+           <string role="key" value="intlinks_to_anchors"></string>
+           <dictionary></dictionary>
+           <string role="key" value="nextImageId"></string>
+           <int value="0"></int>
+           <string role="key" value="parentNode"></string>
+           <none></none>
           </dictionary>
          </instance>
         </list>
-        <string role="key" value="storyTextArea"></string>
-        <instance class="exe.engine.field.TextAreaField" reference="12">
-         <dictionary>
-          <string role="key" value="_id"></string>
-          <int value="95"></int>
-          <string role="key" value="_idevice"></string>
-          <reference key="9"></reference>
-          <string role="key" value="_instruc"></string>
-          <unicode value="Create the case story. A good case is one 
-that describes a controversy or sets the scene by describing the characters 
-involved and the situation. It should also allow for some action to be taken 
-in order to gain resolution of the situation."></unicode>
-          <string role="key" value="_name"></string>
-          <unicode value="Story:"></unicode>
-          <string role="key" value="anchor_names"></string>
-          <list></list>
-          <string role="key" value="anchors_linked_from_fields"></string>
-          <dictionary></dictionary>
-          <string role="key" value="content_w_resourcePaths"></string>
-          <unicode content="true" value=""></unicode>
-          <string role="key" value="exe.engine.field.Field.persistenceVersion"></string>
-          <int value="4"></int>
-          <string role="key" value="exe.engine.field.FieldWithResources.persistenceVersion"></string>
-          <int value="2"></int>
-          <string role="key" value="exe.engine.field.TextAreaField.persistenceVersion"></string>
-          <int value="3"></int>
-          <string role="key" value="htmlTag"></string>
-          <string value="section"></string>
-          <string role="key" value="images"></string>
-          <instance class="exe.engine.galleryidevice.GalleryImages">
-           <dictionary>
-            <string role="key" value=".listitems"></string>
-            <list></list>
-            <string role="key" value="idevice"></string>
-            <reference key="12"></reference>
-           </dictionary>
-          </instance>
-          <string role="key" value="intlinks_to_anchors"></string>
-          <dictionary></dictionary>
-          <string role="key" value="nextImageId"></string>
-          <int value="0"></int>
-          <string role="key" value="parentNode"></string>
-          <reference key="3"></reference>
-         </dictionary>
-        </instance>
+        <string role="key" value="icon"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="id"></string>
+        <unicode value="4"></unicode>
+        <string role="key" value="lastIdevice"></string>
+        <bool value="0"></bool>
+        <string role="key" value="nextFieldId"></string>
+        <int value="3"></int>
+        <string role="key" value="originalicon"></string>
+        <unicode value="activity"></unicode>
+        <string role="key" value="parentNode"></string>
+        <reference key="3"></reference>
         <string role="key" value="systemResources"></string>
-        <list></list>
+        <list>
+         <string value="common.js"></string>
+        </list>
         <string role="key" value="undo"></string>
         <bool value="1"></bool>
         <string role="key" value="userResources"></string>
@@ -605,15 +515,19 @@ in order to gain resolution of the situation."></unicode>
      <string role="key" value="_id"></string>
      <unicode value="0"></unicode>
      <string role="key" value="_package"></string>
-     <reference key="5"></reference>
+     <reference key="12"></reference>
+     <string role="key" value="anchor_fields"></string>
+     <list></list>
      <string role="key" value="exe.engine.node.Node.persistenceVersion"></string>
      <int value="2"></int>
      <string role="key" value="exportType"></string>
      <string value="website"></string>
      <string role="key" value="last_full_node_path"></string>
-     <string value="exe-node:Inicio"></string>
+     <string value="exe-node:Software%20Libre"></string>
      <string role="key" value="parent"></string>
      <none></none>
+     <string role="key" value="top_anchors_linked_from_fields"></string>
+     <list></list>
      <string role="key" value="children"></string>
      <list></list>
     </dictionary>
@@ -645,9 +559,9 @@ in order to gain resolution of the situation."></unicode>
     <string role="key" value="format"></string>
     <unicode value=""></unicode>
     <string role="key" value="identifier"></string>
-    <unicode value="d183d8d1-14fa-4cad-a5f6-222d506d0eca"></unicode>
+    <unicode value="1becaf66-c2d2-4206-be6a-ca51edf57c22"></unicode>
     <string role="key" value="language"></string>
-    <unicode value="es"></unicode>
+    <unicode value=""></unicode>
     <string role="key" value="publisher"></string>
     <unicode value=""></unicode>
     <string role="key" value="relation"></string>
@@ -688,45 +602,7 @@ in order to gain resolution of the situation."></unicode>
     <string role="key" value="classification"></string>
     <list></list>
     <string role="key" value="educational"></string>
-    <list>
-     <instance class="exe.engine.lom.lomsubs.educationalSub">
-      <dictionary>
-       <string role="key" value="cognitiveProcess"></string>
-       <list></list>
-       <string role="key" value="context"></string>
-       <list></list>
-       <string role="key" value="description"></string>
-       <list></list>
-       <string role="key" value="difficulty"></string>
-       <none></none>
-       <string role="key" value="intendedEndUserRole"></string>
-       <list></list>
-       <string role="key" value="interactivityLevel"></string>
-       <none></none>
-       <string role="key" value="interactivityType"></string>
-       <none></none>
-       <string role="key" value="language"></string>
-       <list>
-        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-         <dictionary>
-          <string role="key" value="extensiontype_"></string>
-          <none></none>
-          <string role="key" value="valueOf_"></string>
-          <string value="es"></string>
-         </dictionary>
-        </instance>
-       </list>
-       <string role="key" value="learningResourceType"></string>
-       <list></list>
-       <string role="key" value="semanticDensity"></string>
-       <none></none>
-       <string role="key" value="typicalAgeRange"></string>
-       <list></list>
-       <string role="key" value="typicalLearningTime"></string>
-       <none></none>
-      </dictionary>
-     </instance>
-    </list>
+    <list></list>
     <string role="key" value="general"></string>
     <instance class="exe.engine.lom.lomsubs.generalSub">
      <dictionary>
@@ -790,7 +666,7 @@ in order to gain resolution of the situation."></unicode>
            <string role="key" value="uniqueElementName"></string>
            <string value="entry"></string>
            <string role="key" value="valueOf_"></string>
-           <unicode value="d183d8d1-14fa-4cad-a5f6-222d506d0eca"></unicode>
+           <unicode value="1becaf66-c2d2-4206-be6a-ca51edf57c22"></unicode>
           </dictionary>
          </instance>
         </dictionary>
@@ -799,16 +675,7 @@ in order to gain resolution of the situation."></unicode>
       <string role="key" value="keyword"></string>
       <list></list>
       <string role="key" value="language"></string>
-      <list>
-       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-        <dictionary>
-         <string role="key" value="extensiontype_"></string>
-         <none></none>
-         <string role="key" value="valueOf_"></string>
-         <string value="es"></string>
-        </dictionary>
-       </instance>
-      </list>
+      <list></list>
       <string role="key" value="structure"></string>
       <none></none>
       <string role="key" value="title"></string>
@@ -827,14 +694,7 @@ in order to gain resolution of the situation."></unicode>
       <string role="key" value="identifier"></string>
       <list></list>
       <string role="key" value="language"></string>
-      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-       <dictionary>
-        <string role="key" value="extensiontype_"></string>
-        <none></none>
-        <string role="key" value="valueOf_"></string>
-        <string value="es"></string>
-       </dictionary>
-      </instance>
+      <none></none>
       <string role="key" value="metadataSchema"></string>
       <list>
        <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
@@ -868,45 +728,7 @@ in order to gain resolution of the situation."></unicode>
     <string role="key" value="classification"></string>
     <list></list>
     <string role="key" value="educational"></string>
-    <list>
-     <instance class="exe.engine.lom.lomsubs.educationalSub">
-      <dictionary>
-       <string role="key" value="cognitiveProcess"></string>
-       <list></list>
-       <string role="key" value="context"></string>
-       <list></list>
-       <string role="key" value="description"></string>
-       <list></list>
-       <string role="key" value="difficulty"></string>
-       <none></none>
-       <string role="key" value="intendedEndUserRole"></string>
-       <list></list>
-       <string role="key" value="interactivityLevel"></string>
-       <none></none>
-       <string role="key" value="interactivityType"></string>
-       <none></none>
-       <string role="key" value="language"></string>
-       <list>
-        <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-         <dictionary>
-          <string role="key" value="extensiontype_"></string>
-          <none></none>
-          <string role="key" value="valueOf_"></string>
-          <string value="es"></string>
-         </dictionary>
-        </instance>
-       </list>
-       <string role="key" value="learningResourceType"></string>
-       <list></list>
-       <string role="key" value="semanticDensity"></string>
-       <none></none>
-       <string role="key" value="typicalAgeRange"></string>
-       <list></list>
-       <string role="key" value="typicalLearningTime"></string>
-       <none></none>
-      </dictionary>
-     </instance>
-    </list>
+    <list></list>
     <string role="key" value="general"></string>
     <instance class="exe.engine.lom.lomsubs.generalSub">
      <dictionary>
@@ -970,7 +792,7 @@ in order to gain resolution of the situation."></unicode>
            <string role="key" value="uniqueElementName"></string>
            <string value="entry"></string>
            <string role="key" value="valueOf_"></string>
-           <unicode value="d183d8d1-14fa-4cad-a5f6-222d506d0eca"></unicode>
+           <unicode value="1becaf66-c2d2-4206-be6a-ca51edf57c22"></unicode>
           </dictionary>
          </instance>
         </dictionary>
@@ -979,16 +801,7 @@ in order to gain resolution of the situation."></unicode>
       <string role="key" value="keyword"></string>
       <list></list>
       <string role="key" value="language"></string>
-      <list>
-       <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-        <dictionary>
-         <string role="key" value="extensiontype_"></string>
-         <none></none>
-         <string role="key" value="valueOf_"></string>
-         <string value="es"></string>
-        </dictionary>
-       </instance>
-      </list>
+      <list></list>
       <string role="key" value="structure"></string>
       <none></none>
       <string role="key" value="title"></string>
@@ -1007,14 +820,7 @@ in order to gain resolution of the situation."></unicode>
       <string role="key" value="identifier"></string>
       <list></list>
       <string role="key" value="language"></string>
-      <instance class="exe.engine.lom.lomsubs.LanguageIdSub">
-       <dictionary>
-        <string role="key" value="extensiontype_"></string>
-        <none></none>
-        <string role="key" value="valueOf_"></string>
-        <string value="es"></string>
-       </dictionary>
-      </instance>
+      <none></none>
       <string role="key" value="metadataSchema"></string>
       <list>
        <instance class="exe.engine.lom.lomsubs.metadataSchemaSub">
@@ -1118,16 +924,7 @@ in order to gain resolution of the situation."></unicode>
   <string role="key" value="mxmlwidth"></string>
   <string value=""></string>
   <string role="key" value="resources"></string>
-  <dictionary>
-   <string role="key" value="db6fbea6ea756946efadfc349ef7a041"></string>
-   <list>
-    <reference key="8"></reference>
-   </list>
-   <string role="key" value="de47e53d4aeac0ec27fae728d1fd0336"></string>
-   <list>
-    <reference key="7"></reference>
-   </list>
-  </dictionary>
+  <dictionary></dictionary>
   <string role="key" value="root"></string>
   <reference key="3"></reference>
   <string role="key" value="scolinks"></string>
@@ -1137,7 +934,7 @@ in order to gain resolution of the situation."></unicode>
   <string role="key" value="scowwebsite"></string>
   <bool value="0"></bool>
   <string role="key" value="style"></string>
-  <unicode value="INTEF"></unicode>
+  <unicode value="Tknika"></unicode>
   <string role="key" value="sugaractivityname"></string>
   <string value=""></string>
   <string role="key" value="sugarservicename"></string>
