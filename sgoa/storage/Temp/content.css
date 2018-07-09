@@ -1,106 +1,343 @@
-/* Imágenes utilizadas */
-/* my_logo.jpg - Imagen de la cabecera de los documentos exportados como Página sola */
-/* my_list.gif - Sustituye al punto de las listas no numeradas introducidas desde eXeLearning  */
-/* my_ims_header.jpg - Imagen de fondo para el título de cada página en los IMS y en los documentos exportados como Página sola */
-/* my_header.jpg - Imagen de la cabecera de los documentos exportados como Sitio web */
-/* Los iconos de los iDevices también se controlan mediante CSS (ver iDevice icons) */ 
-
-/* Colores */
 body{
-	color:#333333; /* Cuerpo de texto */
-	background:#ffffff; /* Color de fondo */
+	padding: 15px;
+	margin: 0;
+	text-align: left;
+	color: #000;
+	background: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+	line-height: 1.5;
 }
+
 a{
-	color:#0055A6; /* Enlaces */
+	color:#707820;
 }
-#header{
-	color:#666666; /* Título del proyecto */
+
+#header,#emptyHeader{
+	text-align: left;
+	height: 65px;
+	font-size: 1.25em;
+	vertical-align: bottom;
+	color: #C6D644;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-top-style: none;
+	border-bottom-style: solid;
+	border-top-color: #000;
+	border-bottom-color: #C6D644;
+	line-height: 20px;
+	/*padding-left: 250px;*/
+	background-color: #000;
+	background-image: url(tknika_logo.png);
+	padding-top:10px;
 }
-#nodeTitle{
-	color:#008F75; /* Título de cada página */
-    text-shadow:1px 1px 1px #ffffff; /* Sombra  */
+
+#header h1{
+	margin:0;
+	font-size:1em;
 }
+
+#nodeTitle,.nodeTitle{
+	font-size: 1.6em;
+	margin: 0;
+	text-align: left;
+	font-weight: bold;
+	color: #222;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #C6D644;
+	padding-top: 0.5em;
+	padding-right: 0;
+	padding-bottom: 0.6em;
+	padding-left: 0.7em;
+	text-transform: uppercase;
+	font-variant: normal;
+	background-image: url(tknika_tit.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+} 
+
+/* .nodeTitle when single page */
+
+#main .nodeTitle{
+	margin-top:.6em;
+	color:#222;
+}
+
 #main #nodeDecoration{
-	border-color:#E7EBEE; /* Borde del título de cada página */
-	background-color:#DEE5EB; /* Color de fondo */
+/*	padding:10px 0 5px 0;
+*/	margin-bottom:15px;
+	border:0;
+	background:url(tit_tknika.jpg) no-repeat right bottom;
+	text-align:left;
+}
+
+h2{
+	font-size: 1.4em;
+	color: #4d4d4d;
+}
+
+#main .iDeviceTitle{
+	display: inline;
+	font-size: 1.8em;
+	color: #4d4d4d;
+}
+
+h3{
+	font-size: 1.3em;
+/*	color: #C6D644;
+*/}
+
+h4{
+	font-size:1.2em;
+}
+
+h5{
+	font-size:1.1em;
+}
+
+.iDevice{
+	border-bottom-width: 2px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCC;
+	margin-top: 1.8em;
+	margin-right: 0;
+	margin-bottom: 1.8em;
+	margin-left: 0;
+	padding-bottom: 1.8em;
 }
 .iDeviceTitle{
-	color: #8A5F31; /* Títulos de los iDevices */
-}
-.iDevice_inner{
-	background-color:#FAF8F2; /* Fondo del cuerpo del iDevice */
-	color:#4d4d4d; /* Texto de los iDevices */
-	border-color:#EBE3CC; /* Borde del cuerpo de los iDevices */
-}
-#siteFooter{
-	color:#666666; /* Texto del pie de página */
-}
-#siteFooter a{
-	color:#8A5F31; /* Enlaces del pie de página */
-}
-input.feedbackbutton{
-	background-color: #DBE992; /* Color de fondo del botón de feedback */
+	font-size: 1.2em;
+	vertical-align: middle;
+	color: #666;
+	line-height: 1em;
+	top: 38px;
 }
 
-/* Otras definiciones */
-body{font:.82em/1.5 Arial,Verdana,Helvetica,sans-serif;padding:15px;margin:0;text-align:left}
-#nodeTitle{font-size:1.5em;margin:0;text-align:left;font-weight:bold}
-#main #nodeDecoration{padding:17px 15px 5px 15px;margin-bottom:15px;background-repeat:no-repeat;background-position:right 0;border-width:1px;border-style:solid;background-image:url(my_ims_header.jpg);text-align:left}
-#header{height:54px;background-repeat:no-repeat;background-position:0 0;background-image:url(my_logo.jpg);padding-bottom:10px;padding-left:10px;font-size:1.1em;font-weight:bold}
-#header h1{margin:0;font-size:1em}
-#main ul li{width:auto;list-style-image:url(my_list.gif);margin-bottom:0.2em}
-#wikipedia-content ul li{list-style-image:none;margin-bottom:auto}
-#main h2{font-size:1.4em}
-#main h3{font-size:1.3em}
-#main h4{font-size:1.2em}
-#main h5{font-size:1.1em}
-.iDevice{margin:10px 0 20px 0}
-.iDeviceTitle{font-size:1.2em;vertical-align:bottom;top:auto} 
-#main .iDeviceTitle{display:inline;font-size:1.2em}
+.iDevice_icon{
+	width:23px;
+	height:auto;
+	margin-right:5px;
+} 
 
-/* iDevice icons */
-.iDevice_icon{width:30px;height:auto;margin-right:5px} /* Legacy: old iDevices */
-.iDevice_header{background-image:url(icon_generic.gif);padding:5px 0 5px 37px;margin-bottom:5px}
-.activityIdevice .iDevice_header{background-image:url(icon_activity.gif)}
-.readingIdevice .iDevice_header{background-image:url(icon_reading.gif);padding-left:41px}
+
+/* iDevice iconos */
+.iDevice_header{
+	background: url(icon_generic.gif) no-repeat 0 0;
+	padding-left: 70px;
+	height: 85px;	
+}
+
+.activityIdevice .iDevice_header{
+	background-image:url(icon_activity.gif);
+}
+
+.readingIdevice .iDevice_header{
+	background-image:url(icon_reading.gif);
+}
+
 .ListaIdevice .iDevice_header,
 .QuizTestIdevice .iDevice_header,
 .MultichoiceIdevice .iDevice_header,
-.TrueFalseIdevice .iDevice_header,
 .MultiSelectIdevice .iDevice_header,
-.ClozeIdevice .iDevice_header{background-image:url(icon_question.gif)}
-.CasestudyIdevice .iDevice_header{background-image:url(icon_casestudy.gif)}
-.preknowledgeIdevice .iDevice_header{background-image:url(icon_preknowledge.gif);padding-left:39px}
-.GalleryIdevice .iDevice_header{background-image:url(icon_gallery.gif)}
-.objectivesIdevice .iDevice_header{background-image:url(icon_objectives.gif)}
-.ReflectionIdevice .iDevice_header{background-image:url(icon_reflection.gif)}
-
-.iDevice_inner{padding: 10px 20px;border-width:1px 0 1px 0;border-style:dotted}
-.iDevice_content:before,.iDevice_content:after{content:"";display:table}
-.iDevice_content:after{clear:both}
-.iDevice_content{*zoom:1}/* IE6/7: Trigger hasLayout and contain floats */
-
-/* base.css */
-.block,.feedback{padding:0}
-.feedback{font-family:Arial,Verdana,Helvetica,sans-serif;font-size:1em}
-li{list-style-position:outside}
-.exe-dl .icon{line-height:18px}
-.js .exe-dl dd{margin-left:36px}
-
-/* Hide/Show iDevice */
-.toggle-idevice{display:block;margin:0;text-align:right}
-.iDevice_header .toggle-idevice{float:right;padding-top:2px;margin:0}
-.toggle-idevice a{display:inline-block;width:16px;height:16px;background:url(my_hide_show.png) no-repeat 0 -16px}
-.toggle-idevice .show-idevice{background-position:0 0}
-.toggle-idevice span{position:absolute;overflow:hidden;clip:rect(0,0,0,0);height:0}
-
-/* Effects */
-.exe-fx .fx-C2,
-.exe-fx .fx-C2 a,
-.fx-pagination a{
-	background:#EEF2F5;
+.ClozeIdevice .iDevice_header{
+	background-image:url(icon_question.gif);
 }
 
-/* To review */
-.TrueFalseIdevice .question{margin-bottom:25px}
-.TrueFalseIdevice .question:last-child{margin-bottom:0}
+.TrueFalseIdevice .iDevice_header{
+	background-image:url(icon_question.gif);
+	}
+
+.CasestudyIdevice .iDevice_header{
+	background-image:url(icon_casestudy.gif);
+}
+
+.preknowledgeIdevice .iDevice_header{
+	background-image:url(icon_preknowledge.gif);
+}
+
+.GalleryIdevice .iDevice_header{
+	background-image:url(icon_gallery.gif);
+}
+
+.objectivesIdevice .iDevice_header{
+	background-image:url(icon_objectives.gif);
+}
+
+.ReflectionIdevice .iDevice_header{
+	background-image:url(icon_reflection.gif);
+}
+
+.iDevice_content{
+	overflow:auto;
+}
+.iDevice_inner{
+	color: #444;
+	border-radius: 2px;
+	background-color: #EAF2A8;
+	background-image: url(idevice_lateral.gif);
+	background-repeat: repeat-y;
+	background-position: 0px 0px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+}
+
+#siteFooter{
+	color: #666666;
+	font-size: .95em;
+	padding: 15px 0;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #c6d644;
+}
+
+#siteFooter a{
+	color:#000;
+}
+
+input,select,textarea{
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:1em;
+}
+
+#lbOverlay{
+	background-color:#f3f3f3;
+}
+
+#lbOuterContainer{
+	border-color:#ddd;
+}
+
+.ExternalUrlIdevice iframe{
+	border:none;
+}
+
+/* base.css */
+
+.block,.feedback{
+	padding:0;
+}
+
+.feedback{
+	font-family:Arial,Verdana,Helvetica,sans-serif;
+	font-size:1em;
+	background-color: #fff;
+	padding: 10px;
+	border: solid 1px #000;
+}
+
+li{
+	list-style-position:outside;
+}
+
+#wikipedia-content ul li{
+	list-style-image:none;
+	margin-bottom:auto;
+}
+
+/* Form buttons */
+
+.iDevice_inner input[type=submit],.iDevice_inner input[type=button],.feedbackbutton{
+	padding: 3px 5px;
+	color: #000;
+	border-radius: 3px;
+	margin-bottom: 1em;
+	background-color: #C6D644;
+	border: 1px solid #000;
+}
+
+.iDevice_inner input[type=submit]:hover,.iDevice_inner input[type=button]:hover,.feedbackbutton:hover{
+	background:#000;
+	color:#f3f3f3;
+}
+
+/* Hide/Show iDevice */
+
+.toggle-idevice{
+	margin:12px 0 0;
+	text-align:right;
+	display:block;
+}
+
+.iDevice_header .toggle-idevice{
+	float:right;
+	padding-top:2px;
+	margin:0;
+}
+
+.toggle-idevice a{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(tknika_ver_ocu.gif);
+	background-repeat: no-repeat;
+	background-position: 4px -16px;
+}
+
+.toggle-idevice .show-idevice{
+	background-position:4px 0;
+}
+
+.toggle-idevice span{
+	position:absolute;
+	overflow:hidden;
+	clip:rect(0,0,0,0);
+	height:0;
+}
+tr:nth-child(2n+1) {
+	background-color: #999;
+	color: #fff
+}
+tr:nth-child(2n) {
+	background-color: #666;
+	color: #fff
+}
+table{
+	border-spacing: 0px;
+	}
+	 td {
+	border: 1px solid #fff;
+	padding-top: 2px;
+	padding-right: 4px;
+	padding-bottom: 2px;
+	padding-left: 4px;
+}
+ th{
+	border: thin solid #fff;
+	background-color: #919D22;
+	color: #fff;
+	text-align: center;
+	text-transform: capitalize;	
+	}
+	
+.exe-table th,.exe-table-minimalist th{
+	background:#ddd;
+	color:#000
+}
+.exe-table-minimalist th{
+	background:#FFF;
+	color:#000;
+	border:0
+}
+.exe-table tbody th,.exe-table tbody td,.exe-table-minimalist tbody th,.exe-table-minimalist tbody td{
+	color:#000;
+	background:#FFF
+}
+
+@media (max-width: 700px) {
+	#main .iDeviceTitle{
+	font-size: 1.4em;		
+		}
+	#header{
+	padding-top:0px;
+	}
+	}
+@media (max-width: 500px){
+#header{
+	padding-top:0px;
+	}
+}
