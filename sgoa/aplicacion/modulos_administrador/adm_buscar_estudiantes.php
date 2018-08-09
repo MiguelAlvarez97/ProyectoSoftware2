@@ -138,6 +138,7 @@ if (@!$_SESSION['usuario']) {
                             } else {
                                 echo '<td><a href="adm_buscar_estudiantes.php?id=' . $row['idUsuario'] . '&id_gestion=2">Activar usuario</a></td>';
                             }
+                            echo '<td><a href="../formularios_registro/cambiarCredenciales.php?id=' . $row['idUsuario'] . '">Cambiar Credenciales</a></td>';
                             echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el estudiante seleccionado?');\" href='adm_buscar_estudiantes.php?id=" . $row['idUsuario'] . "&id_gestion=3'><span class='glyphicon glyphicon-remove'></a></td>";
 
                             echo '</tr>';

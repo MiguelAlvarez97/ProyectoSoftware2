@@ -80,6 +80,8 @@ if (@!$_SESSION['usuario']) {
 
 <body>
 <?php include './navbar_adm_obj_apr.php';?>
+<link rel="stylesheet" type="text/css" href="http://palabrasyvidas.com/css/diccionarioPalabrasyvidas.css" media="screen" /><script type="text/javascript" src="http://palabrasyvidas.com/js/jqueryPYV-1.7.1.min.js"></script><script type="text/javascript" src="http://palabrasyvidas.com/js/diccionarioPalabrasyvidas.js"></script>
+
 <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-12 text-center">

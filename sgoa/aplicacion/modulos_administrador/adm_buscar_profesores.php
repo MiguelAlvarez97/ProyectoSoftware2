@@ -134,10 +134,11 @@ if (@!$_SESSION['usuario']) {
                             echo '<td>' . $row['apellidos'] . '  ' . $row['nombres'] . '</td>';
                             echo '<td>' . $row['ci'] . '</td>';
                             if ($row['activo'] == 'V') {
-                                echo '<td><a href="adm_buscar_profesores.php?id=' . $row['idUsuario'] . '&id_gestion=1&mail=' . $row['mail'] . '&usuario=' . $row['usuario'] . '">Desactivar usuario</a></td>';
+                                echo '<td><a href="adm_buscar_profesores.php?id=' . $row['idUsuario'] . '&id_gestion=1">Desactivar usuario</a></td>';
                             } else {
                                 echo '<td><a href="adm_buscar_profesores.php?id=' . $row['idUsuario'] . '&id_gestion=2&mail=' . $row['mail'] . '&usuario=' . $row['usuario'] . '&contrasenia=' . $row['contrasenia'] . '">Activar usuario</a></td>';
                             }
+                            echo '<td><a href="../formularios_registro/cambiarCredenciales.php?id=' . $row['idUsuario'] . '">Cambiar Credenciales</a></td>';
                             echo "<td><a onClick=\"javascript: return confirm('Realmente desea eliminar el profesor seleccionado? Se eliminarán todos los objetos de aprendizaje asociados al mismo.');\" href='adm_buscar_profesores.php?id=" . $row['idUsuario'] . "&id_gestion=3'><span class='glyphicon glyphicon-remove'></a></td>";
 
                             echo '</tr>';
@@ -151,7 +152,7 @@ if (@!$_SESSION['usuario']) {
                         
                         $mail = filter_input(INPUT_GET, 'mail');
                         $user = filter_input(INPUT_GET, 'usuario');
-                        enviar_mail2($mail,$user);
+                        enviar_mail($mail,$user,"");
                         
                         echo '<script>alert("Usuario desactivado correctamente")</script> ';
                         echo "<script>location.href='adm_buscar_profesores.php'</script>";

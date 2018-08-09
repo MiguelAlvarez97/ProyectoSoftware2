@@ -36,7 +36,16 @@ function obtener_estudiante_como_arreglo($id_estud) {
     }
 }
 
-
+function insertar_estudiante($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario) {
+    $conexion = new Conexion();
+    $statement = 'INSERT INTO estudiante (ci,nombres,apellidos, carrera, id_facultad, mail, id_usuario) VALUES (?,?,?,?,?,?,?)';
+    $consulta = $conexion->prepare($statement);
+    if ($consulta->execute(array($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario))) {
+        return true;
+    } else {
+        return false;
+    }
+}
 function insertarValoracion($id_objeto_aprendizaje,$idusuario,$puntaje){
     $conexion=new Conexion();
     $statement = 'INSERT INTO valoracion (idvaloracion,idobjeto_aprendizaje,idusuario,puntuacion) VALUES (?,?,?,?)';

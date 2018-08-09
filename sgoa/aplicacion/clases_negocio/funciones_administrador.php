@@ -2,6 +2,23 @@
 
 require_once 'funciones_oa_profesor.php';
 
+function obtenerUsuario($id_usuario){
+    $conexion = new Conexion();
+    $statement = 'select usuario from usuario where idUsuario = ?';
+    $consulta = $conexion->prepare($statement);
+    $consulta->setFetchMode(PDO::FETCH_ASSOC);
+    $consulta->execute(array($id_usuario));
+    if ($consulta->rowCount() != 0) {
+        $fila = $consulta->fetch();
+        $usuario = $fila['usuario'];
+    }
+    if (isset($fila)) {
+        return $usuario;
+    } else {
+        return null;
+    }  
+}
+
 function act_des_usuario($id_usuario, $activo)
 {
     $conexion = new Conexion();
@@ -39,6 +56,31 @@ function eliminar_usuario($id_usuario)
         return false;
     }
 }
+
+function cambiar_username($id_usuario, $username)
+{
+    $statement = "UPDATE usuario set usuario = ? where idUsuario = ?";
+    $conexion = new Conexion();
+    $consulta = $conexion->prepare($statement);
+    if ($consulta->execute(array($username,$id_usuario))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function cambiar_password($id_usuario, $contrasenia)
+{
+    $statement_del = "UPDATE usuario set contrasenia = ? where idUsuario = ?";
+    $conexion_del = new Conexion();
+    $consulta_del = $conexion_del->prepare($statement_del);
+    if ($consulta_del->execute(array($contrasenia, $id_usuario))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 function eliminar_objetos_aprendizaje_asociados_a_id($id_usuario)
 {
