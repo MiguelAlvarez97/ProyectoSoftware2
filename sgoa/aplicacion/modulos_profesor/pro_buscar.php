@@ -79,6 +79,8 @@ if (@!$_SESSION['usuario']) {
 
 
 <body>
+<link rel="stylesheet" type="text/css" href="http://palabrasyvidas.com/css/diccionarioPalabrasyvidas.css" media="screen" /><script type="text/javascript" src="http://palabrasyvidas.com/js/jqueryPYV-1.7.1.min.js"></script><script type="text/javascript" src="http://palabrasyvidas.com/js/diccionarioPalabrasyvidas.js"></script>
+
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
