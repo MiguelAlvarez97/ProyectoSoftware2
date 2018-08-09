@@ -10,10 +10,11 @@ $facultad = filter_input(INPUT_POST, 'facultad');
 $usuario= generar_usuario_profesor($nombres, $apellidos);
 $contrasenia= generar_cadena_aleatoria();
 
-insertar_usuario($usuario, $contrasenia,'PRO', 'F');
+insertar_usuario($usuario, $contrasenia,'PRO', 'V');
 $id_usuario= recuperar_id_usuario_por_nombre($usuario);
 if(insertar_profesor($cedula, $nombres, $apellidos, $departamento, $facultad, $email, $id_usuario)){
      echo '<script>alert("Usuario registrado correctamente! Revise su mail para obtener las credenciales")</script> ';
+    enviar_mail4($email,$usuario,$contrasenia);
     echo "<script>location.href='Login.php'</script>";
 }else{
     echo '<script>alert("No se ha podido registrar el usuario. Contacte a un administrador")</script> ';

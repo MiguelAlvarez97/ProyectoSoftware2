@@ -10,6 +10,7 @@ $nombre = filter_input(INPUT_POST, 'nombre');
 $descripcion = filter_input(INPUT_POST, 'descripcion');
 $institucion = filter_input(INPUT_POST, 'institucion');
 $palabras_clave = filter_input(INPUT_POST, 'palabras_claves');
+$cbx_materia = filter_input(INPUT_POST, 'cbx_materia');
 $seGuardo_db = 0;
 $seGuardo_sto = 1;
 $path = $_FILES['o_aprendizaje']['name'];
@@ -18,10 +19,12 @@ $target_file =$almacenamiento . urlencode($nombre). '.' . $ext;
 $id_usuario= $_SESSION['id'];
 
 $conexion = new Conexion();
-$statement = 'INSERT INTO objeto_aprendizaje (nombre,descripcion,id_usuario,institucion,palabras_clave,tamanio,ruta) VALUES (?, ?, ?, ?,?,?,?)';
+$statement = 'INSERT INTO objeto_aprendizaje (nombre,descripcion,id_usuario,institucion,palabras_clave,tamanio,ruta,materia, descarga) VALUES (?, ?, ?, ?,?,?,?,?,?)';
 $consulta = $conexion->prepare($statement);
-if ($consulta->execute(array($nombre, $descripcion, $id_usuario, $institucion, $palabras_clave, $_FILES["o_aprendizaje"]["size"], $target_file))) {
+if ($consulta->execute(array($nombre, $descripcion, $id_usuario, $institucion, $palabras_clave, $_FILES["o_aprendizaje"]["size"], $target_file, consultar_materiaxid($cbx_materia), 0))) {
     $seGuardo_db = 1;
+
+    actualizar_cant_materia($cbx_materia);
     echo "1";
 } else {
     $seGuardo_db = 0;
@@ -30,6 +33,11 @@ if ($consulta->execute(array($nombre, $descripcion, $id_usuario, $institucion, $
 $conexion = null;
 
 if ($seGuardo_db == 1) {
+    $mail = consultar_mail($id_usuario);
+    $id_oa = consultar_idoa($nombre);
+    $link = 'http://localhost/proyectosoftware/sgoa/aplicacion/modulos_profesor/pro_comentarios.php?id=' .$id_oa.' end';
+    enviar_mail3($mail, $link, $descripcion);
+
     if (file_exists($target_file)) {
         echo "Lo sentimos el archivo ya existe";
         $seGuardo_sto = 0;

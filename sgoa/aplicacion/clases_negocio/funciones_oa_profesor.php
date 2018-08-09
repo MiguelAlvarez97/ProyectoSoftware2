@@ -84,6 +84,17 @@ function obtener_oa_como_arreglo($id_objeto_aprendizaje) {
     }
 }
 
+function insertar_valoracion($id_objeto_aprendizaje,$idusuario,$puntaje){
+    $conexion=new Conexion();
+    $statement = 'INSERT INTO valoracion (idvaloracion,idobjeto_aprendizaje,idusuario,puntuacion) VALUES (?,?,?,?)';
+    $consulta = $conexion ->prepare($statement);
+     if ($consulta->execute(array(null,$id_objeto_aprendizaje,$idusuario,$puntaje))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function consultarNombreUsuario($id_usuario){
     $conexion = new Conexion();
     $statement = 'select usuario from usuario where idusuario=?';
@@ -136,6 +147,13 @@ function eliminarComentario($id_comentario){
     $consulta_del->execute(array($id_comentario));
 }
 
+function actualizar_cant_materia ($materia_nombre){
+    $statement_del = "UPDATE materia SET cantidad=cantidad+1 WHERE materia_id =?";
+    $conexion_del = new Conexion();
+    $consulta_del = $conexion_del->prepare($statement_del);
+    $consulta_del->execute(array($materia_nombre));
+}
+
 function obtener_lista_de_oas() {
     $conexion = new Conexion();
     $statement = 'select nombre from objeto_aprendizaje';
@@ -185,6 +203,7 @@ function insertar_usuario($usuario, $contrasenia, $tipo_usuario, $esta_activo) {
     $consulta = $conexion->prepare($statement);
     if ($consulta->execute(array($usuario, $contrasenia, $tipo_usuario, $esta_activo))) {
         return true;
+
     } else {
         return false;
     }
@@ -207,16 +226,6 @@ function recuperar_id_usuario_por_nombre($usuario) {
     }
 }
 
-function insertar_estudiante($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario) {
-    $conexion = new Conexion();
-    $statement = 'INSERT INTO estudiante (ci,nombres,apellidos, carrera, id_facultad, mail, id_usuario) VALUES (?,?,?,?,?,?,?)';
-    $consulta = $conexion->prepare($statement);
-    if ($consulta->execute(array($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario))) {
-        return true;
-    } else {
-        return false;
-    }
-}
 
 function insertar_profesor($ci, $nombres, $apellidos, $id_departamento, $id_facultad, $mail, $id_usuario) {
     $conexion = new Conexion();
@@ -229,13 +238,10 @@ function insertar_profesor($ci, $nombres, $apellidos, $id_departamento, $id_facu
     }
 }
 
-function generar_cadena_aleatoria($length = 5) {
-    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $longitud_caracteres = strlen($caracteres);
+function generar_cadena_aleatoria() {
+
     $cadena_aleatoria = '';
-    for ($i = 0; $i < $length; $i++) {
-        $cadena_aleatoria .= $caracteres[rand(0, $longitud_caracteres - 1)];
-    }
+    $cadena_aleatoria = substr(md5(uniqid()), 0, 8);
     return $cadena_aleatoria;
 }
 
@@ -261,6 +267,17 @@ function generar_usuario_profesor($nombre, $apellido){
     }
 }
 
+function insertar_estudiante($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario) {
+    $conexion = new Conexion();
+    $statement = 'INSERT INTO estudiante (ci,nombres,apellidos, carrera, id_facultad, mail, id_usuario) VALUES (?,?,?,?,?,?,?)';
+    $consulta = $conexion->prepare($statement);
+    if ($consulta->execute(array($ci, $nombres, $apellidos, $carrera, $facultad, $mail, $id_usuario))) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function obtener_nro_usuarios_con_usuario($usuario) {
     $conexion = new Conexion();
     $statement = 'select count(*) as nro_usuarios from usuario where usuario=?';
@@ -278,4 +295,91 @@ function obtener_nro_usuarios_con_usuario($usuario) {
     }
 }
 
+function actualizar_cant_descarga ($id_objeto){
+    $statement_del = "UPDATE objeto_aprendizaje SET descarga=descarga+1 WHERE idobjeto_aprendizaje =?";
+    $conexion_del = new Conexion();
+    $consulta_del = $conexion_del->prepare($statement_del);
+    $consulta_del->execute(array($id_objeto));
+}
+
+function consultar_materiaxid($cbx_materia){
+    $conexion = new Conexion();
+    $statement = 'select materia_nombre from materia where materia_id=?';
+    $consulta = $conexion->prepare($statement);
+    $consulta->setFetchMode(PDO::FETCH_ASSOC);
+    $consulta->execute([$cbx_materia]);
+    if ($consulta->rowCount() != 0) {
+        $fila = $consulta->fetch();
+        $materia_nombre = $fila['materia_nombre'];
+    }
+    if (isset($materia_nombre)) {
+        return $materia_nombre;
+    } else {
+        return null;
+    }
+}
+function consultar_mail($id_usuario){
+    $conexion = new Conexion();
+    $statement = 'SELECT mail FROM profesor, objeto_aprendizaje WHERE objeto_aprendizaje.id_usuario = profesor.id_usuario and objeto_aprendizaje.id_usuario = ?';
+    $consulta = $conexion->prepare($statement);
+    $consulta->setFetchMode(PDO::FETCH_ASSOC);
+    $consulta->execute([$id_usuario]);
+    if ($consulta->rowCount() != 0) {
+        $fila = $consulta->fetch();
+        $mail = $fila['mail'];
+    }
+    if (isset($mail)) {
+        return $mail;
+    } else {
+        return null;
+    }
+}
+
+function consultar_idoa($nombre){
+    $conexion = new Conexion();
+    $statement = 'SELECT idobjeto_aprendizaje FROM objeto_aprendizaje WHERE objeto_aprendizaje.nombre = "'.$nombre.'"';
+    $consulta = $conexion->prepare($statement);
+    $consulta->setFetchMode(PDO::FETCH_ASSOC);
+    $consulta->execute();
+    if ($consulta->rowCount() != 0) {
+        $fila = $consulta->fetch();
+        $idobjeto_aprendizaje = $fila['idobjeto_aprendizaje'];
+    }
+    if (isset($idobjeto_aprendizaje)) {
+        return $idobjeto_aprendizaje;
+    } else {
+        return null;
+    }
+}
+
+
+function enviar_mail3($mail, $link, $desc)
+{
+    $to = ''. $mail . '';
+    $subject = 'SGOA!';
+    $message = 'Estimado usuario. 
+    Su nuevo OA se ha añadido correctamente, puede consultar sus comentarios por medio del siguiente link: ' .$link. '
+    Descripción: ' .$desc;
+    $headers = "From: objetosaprendizaje593@gmail.com\r\n";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "SUCCESS";
+    } else {
+        echo "ERROR";
+    }
+}
+
+function enviar_mail4($mail, $usuario, $contrasenia)
+{
+    $to = ''. $mail . '';
+    $subject = 'Hello from SGOA!';
+    $message = 'Usuario:' . $usuario . '
+    Password:' . $contrasenia . '
+    Usuario activado correctamente';
+    $headers = "From: objetosaprendizaje593@gmail.com\r\n";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "SUCCESS";
+    } else {
+        echo "ERROR";
+    }
+}
 ?>

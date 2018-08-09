@@ -12,6 +12,22 @@ function act_des_usuario($id_usuario, $activo)
     $consulta->execute();
 }
 
+function consultarCarreras(){
+    $conexion = new Conexion();
+    $statement = 'select * from facultad';
+    $consulta = $conexion->prepare($statement);
+    $consulta->setFetchMode(PDO::FETCH_ASSOC);
+    $consulta->execute();
+    if ($consulta->rowCount() != 0) {
+        $fila = $consulta->fetch();
+    }
+    if (isset($fila)) {
+        return $fila;
+    } else {
+        return null;
+    }  
+}
+
 function eliminar_usuario($id_usuario)
 {
     $statement_del = "DELETE FROM usuario WHERE idUsuario=?";
@@ -51,7 +67,8 @@ function enviar_mail($mail, $usuario, $contrasenia)
     $to = ''. $mail . '';
     $subject = 'Hello from SGOA!';
     $message = 'Usuario:' . $usuario . '
-    Password:' . $contrasenia . '';
+    Password:' . $contrasenia . '
+    Usuario activado correctamente';
     $headers = "From: objetosaprendizaje593@gmail.com\r\n";
     if (mail($to, $subject, $message, $headers)) {
         echo "SUCCESS";
@@ -60,32 +77,21 @@ function enviar_mail($mail, $usuario, $contrasenia)
     }
 }
 
-function enviar_mail2($mail, $usuario, $contrasenia)
+function enviar_mail2($mail, $usuario)
 {
-    $titulo = 'Credenciales de acceso al sistema SGOA';
-    $cabeceras = 'MIME-Version: 1.0' . "\r\n";
-    $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-    $mensaje = '<h3 align="center">Usuario:' . $usuario . '</h3><br><br>
-            <h3 align="center">Password:' . $contrasenia . '</h3><br><br>';
-
-    $tipocorreos = explode('@', $mail);
-
-    if ($tipocorreos['1'] == 'gmail.com') {
-        // Cabeceras adicionales para gmail
-        $cabeceras .= "From: Administrador" . "\r\n";
+    $to = ''. $mail . '';
+    $subject = 'SGOA!';
+    $message = 'Usuario:' . $usuario . ' Su usuario ha sido baneado del sistema';
+    $headers = "From: objetosaprendizaje593@gmail.com\r\n";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "SUCCESS";
     } else {
-        // Cabeceras adicionales para hotmail y demas
-        $cabeceras .= 'From: administrador <eprinss_02@hotmail.com>' . "\r\n";
+        echo "ERROR";
     }
-    mail($mail, $titulo, $mensaje, $cabeceras);
 }
 
-function eliminarComentario($id_comentario){
-    $statement_del = "DELETE FROM comentario WHERE idcomentario=?";
-    $conexion_del = new Conexion();
-    $consulta_del = $conexion_del->prepare($statement_del);
-    $consulta_del->execute(array($id_comentario));
-}
+
+
+
 
 ?>
