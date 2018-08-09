@@ -253,7 +253,7 @@ if (@!$_SESSION['usuario']) {
     </div>
 </div></br></br></br>
 <footer class="label-default container-fluid text-center">
-    <p class="copyright small">Copyright &copy; Jaime Crespin, Jossué Dután, Alexis Maldonado 2018</p>
+<p align="left" class="copyright small">Copyright &copy; Alex Ulloa, Miguel Álvarez, Jossué Dután, Alexis Maldonado 2018</p>
 </footer>
 </body>
 

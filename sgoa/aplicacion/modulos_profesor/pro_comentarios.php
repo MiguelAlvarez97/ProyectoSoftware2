@@ -227,6 +227,8 @@ require_once '../clases_negocio/clase_conexion.php';
 require '../clases_negocio/funciones_oa_profesor.php';
 require '../clases_negocio/funciones_oa_estudiante.php';
 $id_objeto_aprendizaje = filter_input(INPUT_GET, 'id');
+$url = "../modulos_profesor/High/examples/pie-basic/estadisticaCalificacion.php?id=".$id_objeto_aprendizaje."";
+
 function verificarValoracion($x){
     echo '<script type="text/javascript"> verificar('.$x.') </script>';
 }
@@ -381,11 +383,7 @@ $objeto_de_aprendizaje = obtener_oa_como_arreglo($id_objeto_aprendizaje);
         <div class="estadistica">
 
             <div class="column">
-
-                <?php
-            echo '<embed src= "../modulos_profesor/High/examples/pie-basic/estadisticaCalificacion.php" height="500" width="600"></embed>';
-
-                ?>
+            <embed src= <?php echo $url; ?> height="500" width="600"></embed>';          
             </div>
         </div>
 </div></br></br></br>

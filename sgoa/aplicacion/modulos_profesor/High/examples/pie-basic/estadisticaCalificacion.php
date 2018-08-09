@@ -1,5 +1,6 @@
 <?php
     require_once 'conexion.php';
+    $id = filter_input(INPUT_GET, 'id')
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -43,12 +44,12 @@ $(function () {
             name: 'Porcentaje',
             data: [
             <?php
-            $sql = "select concat(nombre,' ', puntuacion) as nombre, COUNT(puntuacion) as puntuacion from objeto_aprendizaje, valoracion where objeto_aprendizaje.idobjeto_aprendizaje =  valoracion.idobjeto_aprendizaje GROUP by puntuacion";
+            $sql = "select concat(nombre,' ', puntuacion) as nombre, COUNT(puntuacion) as puntuacion from objeto_aprendizaje, valoracion where valoracion.idobjeto_aprendizaje = objeto_aprendizaje.idobjeto_aprendizaje and objeto_aprendizaje.idobjeto_aprendizaje =".$id." GROUP by puntuacion;";
             $result = mysqli_query($conexion, $sql);
             while($res = mysqli_fetch_array($result)){
             ?>           
             ['<?php echo $res['nombre']; ?>', parseInt('<?php echo $res["puntuacion"]; ?>') ],
-        <?php } ?>
+            <?php } ?>
             ]
         }]
     });
